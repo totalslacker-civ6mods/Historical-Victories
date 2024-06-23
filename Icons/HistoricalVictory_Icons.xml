@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<IconTextureAtlases>
+		<Row Name="ICON_ATLAS_GAMEMODE_HISTORICAL_VICTORY" IconSize="44" IconsPerRow="1" IconsPerColumn="1" Filename="HistoricalVictory_Icon.dds"/>
+	</IconTextureAtlases>
+	<IconDefinitions>
+		<Row Name="ICON_GAMEMODE_HISTORICAL_VICTORY" Atlas="ICON_ATLAS_GAMEMODE_HISTORICAL_VICTORY" Index="0"/>
+	</IconDefinitions>
+</GameInfo>

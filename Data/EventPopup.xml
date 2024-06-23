@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<EventPopupData>
+		<Row Type="HSD_HISTORICAL_VICTORY_POPUP" Title="LOC_HSD_EVENT_HISTORICAL_VICTORY_TITLE" Description="LOC_HSD_EVENT_HISTORICAL_VICTORY_MESSAGE" FilterCondition="ANY" BackgroundImage="HistoricalVictory_Popup.dds" ForegroundImage="" />
+		<Row Type="HSD_HISTORICAL_VICTORY_UNLOCKED_POPUP" Title="LOC_HSD_EVENT_HISTORICAL_VICTORY_UNLOCKED_TITLE" Description="LOC_HSD_EVENT_HISTORICAL_VICTORY_UNLOCKED_MESSAGE" FilterCondition="ANY" BackgroundImage="HistoricalVictory_Popup.dds" ForegroundImage="" />
+	</EventPopupData>
+</GameInfo>

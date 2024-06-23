@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Parameters>
+		<Row ParameterId="GameMode_HISTORICAL_VICTORY" Name="LOC_GAMEMODE_HISTORICAL_VICTORY_NAME" Description="LOC_GAMEMODE_HISTORICAL_VICTORY_DESCRIPTION" Domain="bool" DefaultValue="0" ConfigurationGroup="Game" ConfigurationId="GAMEMODE_HISTORICAL_VICTORY" NameArrayConfigurationId="GAMEMODES_ENABLED_NAMES" GroupId="GameModes" SortIndex="100"  SupportsSinglePlayer="1" Visible="1" />		
+	</Parameters>
+	<ParameterCriteria>
+		<Row ParameterId="GameMode_RAGING_BARBARIANS" ConfigurationGroup="Game" ConfigurationId="GAMEMODE_BARBARIAN_CLANS" Operator="NotEquals" ConfigurationValue="1" />
+	</ParameterCriteria>
+	<GameModeItems>
+		<Row GameModeType="GAMEMODE_HISTORICAL_VICTORY" Name="LOC_GAMEMODE_HISTORICAL_VICTORY_NAME" Description="LOC_GAMEMODE_HISTORICAL_VICTORY_DESCRIPTION" Portrait="HistoricalVictory_Portrait.dds" Background="HistoricalVictory_Background.dds" Icon="ICON_GAMEMODE_HISTORICAL_VICTORY" SortIndex="20" />
+	</GameModeItems>
+	<!--Mode-based Player Overrides-->
+	<PlayerItemOverrideQueries>
+		<Row QueryId="HSD_PlayerItemOverrides_HistoricalVictories"/>
+		<Row QueryId="HSD_PlayerItemOverrides_HistoricalVictories2"/>
+		<Row QueryId="HSD_PlayerItemOverrides_HistoricalVictories3"/>
+	</PlayerItemOverrideQueries>
+	<Queries>
+		<Row QueryId="HSD_PlayerItemOverrides_HistoricalVictories" SQL="SELECT * FROM GameModePlayerItemOverrides WHERE GameModeType = 'GAMEMODE_HSD' AND Type = 'HSD_HISTORICAL_VICTORY_PLAYER'"/>
+		<Row QueryId="HSD_PlayerItemOverrides_HistoricalVictories2" SQL="SELECT * FROM GameModePlayerItemOverrides WHERE GameModeType = 'GAMEMODE_HSD' AND Type = 'HSD_HISTORICAL_VICTORY_PLAYER_2'"/>
+		<Row QueryId="HSD_PlayerItemOverrides_HistoricalVictories3" SQL="SELECT * FROM GameModePlayerItemOverrides WHERE GameModeType = 'GAMEMODE_HSD' AND Type = 'HSD_HISTORICAL_VICTORY_PLAYER_3'"/>
+	</Queries>
+	<QueryCriteria>
+		<Row QueryId="HSD_PlayerItemOverrides_HistoricalVictories" ConfigurationGroup="Game" ConfigurationId="GAMEMODE_HISTORICAL_VICTORY" Operator="Equals" ConfigurationValue="1"/>
+		<Row QueryId="HSD_PlayerItemOverrides_HistoricalVictories2" ConfigurationGroup="Game" ConfigurationId="GAMEMODE_HISTORICAL_VICTORY" Operator="Equals" ConfigurationValue="1"/>
+		<Row QueryId="HSD_PlayerItemOverrides_HistoricalVictories3" ConfigurationGroup="Game" ConfigurationId="GAMEMODE_HISTORICAL_VICTORY" Operator="Equals" ConfigurationValue="1"/>
+	</QueryCriteria>
+</GameInfo>
