@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+  <LocalizedText>
+ 	<Replace Tag="LOC_GAMEMODE_HISTORICAL_VICTORY_NAME" Language="en_US">
+      <Text>Historical Victory Mode</Text>
+    </Replace>
+ 	<Replace Tag="LOC_GAMEMODE_HISTORICAL_VICTORY_DESCRIPTION" Language="en_US">
+      <Text>Civilizations and Leaders receive three unique Historical Victories. These consist of multiple objectives that must be completed for each victory condition. Completing all three victories unlocks the Historical Victory project which can be completed at any time to claim the victory.</Text>
+    </Replace>
+  </LocalizedText>
+</GameData>

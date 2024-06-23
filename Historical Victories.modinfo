@@ -111,7 +111,6 @@
 
 		<!-- TEXT -->
 		<UpdateText id="HISTORICAL_VICTORIES_TEXT" criteria="HISTORICAL_VICTORIES_ENABLED">
-			<File>Text/GameText.xml</File>
 			<!-- <File>Text/CivilopediaText.sql</File> -->
 		</UpdateText>
 		<UpdateText id="HISTORICAL_VICTORIES_TEXT" criteria="HISTORICAL_VICTORIES_ENABLED">
@@ -179,7 +178,6 @@
 		<File>Icons/HistoricalVictory_Icon.dds</File>
 		<File>Icons/HistoricalVictory_Background.dds</File>
 		<File>Icons/HistoricalVictory_Portrait.dds</File>
-		<File>Text/GameText.xml</File>
 		<File>Text/ConfigText.xml</File>
 		<File>Text/HistoricalVictoryText.xml</File>
 		<File>Text/Civilopedia.sql</File>
