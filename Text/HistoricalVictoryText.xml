@@ -1000,6 +1000,17 @@
 	<Replace Tag="LOC_HSD_VICTORY_CIVILIZATION_RUSSIA_3_NAME" Language="en_US">
 		<Text>Iron Curtain</Text>
 	</Replace>
+	
+	<!-- SCOTLAND -->
+	<Replace Tag="LOC_HSD_VICTORY_CIVILIZATION_SCOTLAND_1_NAME" Language="en_US">
+	  <Text>Scottish Enlightenment</Text>
+	</Replace>
+	<Replace Tag="LOC_HSD_VICTORY_CIVILIZATION_SCOTLAND_2_NAME" Language="en_US">
+	  <Text>Highland Charge</Text>
+	</Replace>
+	<Replace Tag="LOC_HSD_VICTORY_CIVILIZATION_SCOTLAND_3_NAME" Language="en_US">
+	  <Text>Act of Union</Text>
+	</Replace>
 
 	<!-- SCYTHIA -->
 	<Replace Tag="LOC_HSD_VICTORY_CIVILIZATION_SCYTHIA_1_NAME" Language="en_US">

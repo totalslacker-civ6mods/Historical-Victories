@@ -839,7 +839,7 @@ local function GetTotalRoutePlots(iPlayer)
 end
 
 local function GetRouteTypeCount(iPlayer, routeType)
-	print("Checking for number of "..tostring(routeType).." plots owned by player "..tostring(iPlayer))
+	-- print("Checking for number of "..tostring(routeType).." plots owned by player "..tostring(iPlayer))
 	local player = Players[iPlayer]
 	local playerCities = player:GetCities()
 	local routeCount = 0
@@ -849,9 +849,9 @@ local function GetRouteTypeCount(iPlayer, routeType)
 		for _,kCityUIDatas in pairs(CityUIDataList) do
 			for _,kCoordinates in pairs(kCityUIDatas.CityPlotCoordinates) do
 				local plot = Map.GetPlotByIndex(kCoordinates.plotID)
-				if plot:IsRoute() and plot:GetRouteType() then
+				if plot:IsRoute() and (plot:GetRouteType() == GameInfo.Routes[routeType].Index) then
 					routeCount = routeCount + 1
-					-- print(tostring(plot:GetRouteType()).." detected. Total count is "..tostring(routeCount))
+					-- print(tostring(GameInfo.Routes[plot:GetRouteType()].RouteType).." detected. Total count is "..tostring(routeCount))
 				end
 			end
 		end
