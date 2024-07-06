@@ -18,9 +18,13 @@ print("Loading Historical Victory World Rankings replace UI...")
 local HideObjectiveCount = {
 	["FIRST_BUILDING_CONSTRUCTED"] = true,
 	["FIRST_CIVIC_RESEARCHED"] = true,
+	["FIRST_HISTORICAL_MOMENT"] = true,
 	["FIRST_GOVERNMENT"] = true,
 	["FIRST_GREAT_PERSON_CLASS"] = true,
+	["FIRST_RELIGIOUS_BELIEFS"] = true,
 	["FIRST_TECH_RESEARCHED"] = true,
+	["FIRST_WAR_DECLARED"] = true,
+	["UNIT_KILL_ERA_DIFFERENCE"] = true,
 	["WONDER_ADJACENT_IMPROVEMENT"] = true,
 	["WONDER_BUILT"] = true,
 }
@@ -37,6 +41,8 @@ local function GetObjectiveDetails(objective)
         detailsText = Locale.Lookup("LOC_HSD_"..type, objective.firstID, objective.secondID)
     elseif type == "ALLIANCE_COUNT" then
         detailsText = Locale.Lookup("LOC_HSD_"..type, objective.count)
+	elseif type == "ALL_CITIES_FOLLOW_SAME_RELIGION" then
+        detailsText = Locale.Lookup("LOC_HSD_"..type)
     elseif type == "BORDERING_CITY_COUNT" then
         detailsText = Locale.Lookup("LOC_HSD_"..type, objective.count)
     elseif type == "BUILDING_COUNT" then
@@ -58,7 +64,7 @@ local function GetObjectiveDetails(objective)
     elseif type == "CITY_WITH_FEATURE_COUNT" then
         detailsText = Locale.Lookup("LOC_HSD_"..type, objective.count, objective.id)
     elseif type == "CITY_WITH_IMPROVEMENT_COUNT" then
-        detailsText = Locale.Lookup("LOC_HSD_"..type, objective.count, objective.id)
+        detailsText = Locale.Lookup("LOC_HSD_"..type, objective.count, Locale.Lookup(GameInfo.Improvements[objective.id].Name))
     elseif type == "COASTAL_CITY_COUNT" then
         detailsText = Locale.Lookup("LOC_HSD_"..type, objective.count)
 	elseif type == "COMPLETE_ESPIONAGE_MISSIONS" then
@@ -120,6 +126,8 @@ local function GetObjectiveDetails(objective)
 		detailsText = Locale.Lookup("LOC_HSD_"..type, Locale.Lookup(GameInfo.GreatPersonClasses[objective.id].Name), Locale.Lookup(GameInfo.Eras[objective.era].Name), objective.count)
 	elseif type == "GREAT_WORK_COUNT" then
 		detailsText = Locale.Lookup("LOC_HSD_"..type, objective.count)
+	elseif type == "GREAT_WORK_ART_COUNT" then
+		detailsText = Locale.Lookup("LOC_HSD_"..type, objective.count)
 	elseif type == "GREAT_WORK_TYPE_COUNT" then
 		detailsText = Locale.Lookup("LOC_HSD_"..type, Locale.Lookup(GameInfo.GreatWorkObjectTypes[objective.id].Name), objective.count)
     elseif type == "HAPPIEST_POPULATION" then
@@ -154,7 +162,7 @@ local function GetObjectiveDetails(objective)
         detailsText = Locale.Lookup("LOC_HSD_"..type, objective.continent)
     elseif type == "MOMENT_COUNT" then
         detailsText = Locale.Lookup("LOC_HSD_"..objective.id.."_COUNT", objective.count)
-    elseif type == "MOST_ACTIVE_TRADEROUTES_ALL" then
+    elseif type == "MOST_ACTIVE_TRADE_ROUTES" then
         detailsText = Locale.Lookup("LOC_HSD_"..type)
     elseif type == "MOST_ARCTIC_TERRAIN" then
         detailsText = Locale.Lookup("LOC_HSD_"..type)
@@ -186,7 +194,7 @@ local function GetObjectiveDetails(objective)
         detailsText = Locale.Lookup("LOC_HSD_"..type, objective.cityNum, objective.popNum)
     elseif type == "OCCUPIED_CAPITAL_COUNT" then
         detailsText = Locale.Lookup("LOC_HSD_"..type, objective.count)
-    elseif type == "PROJECT_COMPLETED" then
+    elseif type == "PROJECT_FIRST_COMPLETED" then
         detailsText = Locale.Lookup("LOC_HSD_"..type, Locale.Lookup(GameInfo.Projects[objective.id].Name))
     elseif type == "PROJECT_COUNT" then
         detailsText = Locale.Lookup("LOC_HSD_"..type, Locale.Lookup(GameInfo.Projects[objective.id].Name), objective.count)
@@ -704,7 +712,7 @@ end
 
 function PopulateHistoricalVictoryInstance(instance:table, playerData:table, victoryType:string, showTeamDetails:boolean )
 	PopulatePlayerInstanceShared(instance, playerData.PlayerID);
-	local detailsText:string = "";
+	local detailsText:string = "[NEWLINE]";
 	local CivilizationTypeName = PlayerConfigurations[playerData.PlayerID]:GetCivilizationTypeName()
 	detailsText = GetHistoricDetails(detailsText, CivilizationTypeName, playerData.PlayerID)
 	instance.Details:SetText(detailsText);
@@ -731,7 +739,6 @@ function GetHistoricDetails(detailsText: string, CivilizationTypeName: string, P
 	-- end
 
 	-- Check if the CivilizationTypeName is in the list for predefined victory objectives
-    -- local civilizationInfo = HSD_victoryConditionsConfig[playerTypeName] -- TODO: Delete
 	local civilizationInfo = victoryConditions[PlayerID] -- TODO: Generic condition not working because players get empty tables
 	if not civilizationInfo then
 		if HSD_victoryConditionsConfig[PlayerConfigurations[PlayerID]:GetCivilizationTypeName()] then
@@ -745,7 +752,7 @@ function GetHistoricDetails(detailsText: string, CivilizationTypeName: string, P
 		else
 			-- print("Civilization and Leader not detected on historical victory list, defaulting to Generic victory")
 			defaultTypeName = "GENERIC_CIVILIZATION"
-			-- Don't update civilizationInfo, using generic conditions
+			civilizationInfo = HSD_victoryConditionsConfig[defaultTypeName]
 		end
 	end
     if civilizationInfo then
@@ -801,6 +808,7 @@ function GetHistoricDetails(detailsText: string, CivilizationTypeName: string, P
 				if not objectiveStatus then objectiveStatus = 0 end -- nil check
 
 				if (g_LocalPlayer:GetDiplomacy():HasMet(PlayerID)) or (g_LocalPlayer:GetID() == PlayerID) then
+				-- if (g_LocalPlayer:GetID() == PlayerID) then
 					-- Display objective status
 					-- detailsText = detailsText .. Locale.Lookup("LOC_HSD_VICTORY_" .. playerTypeName .. "_" .. victoryType .. "_DETAILS_ROW_" .. j) .. " : "
 					detailsText = detailsText .. GetObjectiveDetails(objective) .. " : "
@@ -853,13 +861,13 @@ function GetHistoricDetails(detailsText: string, CivilizationTypeName: string, P
 				-- Unknown player, display nothing
 			end
 
-			for i = 1, objectiveCount do
-				local objectiveStatus = player:GetProperty("HSD_HISTORICAL_VICTORY_" .. victoryType .. "_OBJECTIVE_" .. i)
+			for j = 1, objectiveCount do
+				local objectiveStatus = player:GetProperty("HSD_HISTORICAL_VICTORY_" .. victoryType .. "_OBJECTIVE_" .. j)
 				if not objectiveStatus then objectiveStatus = 0 end -- nil check
 				-- Only display generic objectives for the human player
 				if (g_LocalPlayer:GetID() == PlayerID) then
 					-- Display objective status
-					detailsText = detailsText .. Locale.Lookup("LOC_HSD_VICTORY_" .. defaultTypeName .. "_" .. victoryType .. "_DETAILS_ROW_" .. i)
+					detailsText = detailsText .. Locale.Lookup("LOC_HSD_VICTORY_" .. defaultTypeName .. "_" .. victoryType .. "_DETAILS_ROW_" .. j)
 					if objectiveStatus == 0 then
 						-- Not yet completed
 						detailsText = detailsText .. "[ICON_Bolt]"

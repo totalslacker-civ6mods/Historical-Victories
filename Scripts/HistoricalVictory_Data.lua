@@ -8,6 +8,45 @@ print("Loading HistoricalVictory_Data.lua")
 -- This table tracks the index and objective count for each challenge, to be used to generate text and check properties
 
 HSD_victoryConditionsConfig = {
+    -- DEFAULT
+    GENERIC_CIVILIZATION = {
+        {
+            id = "CULTURAL_DOMINANCE",
+            index = "1",
+            year = nil,
+            era = nil,
+            objectives = {
+                {type = "MOMENT_COUNT", id = "MOMENT_BUILDING_CONSTRUCTED_GAME_ERA_WONDER", count = 6},
+                {type = "MOMENT_COUNT", id = "MOMENT_GREAT_PERSON_CREATED_GAME_ERA", count = 10},
+                {type = "FIRST_HISTORICAL_MOMENT", id = "MOMENT_UNIT_TOURISM_BOMB_FIRST_IN_WORLD"},
+            },
+            score = 1
+        },
+        {
+            id = "MILITARY_DOMINANCE",
+            index = "2",
+            year = nil,
+            era = nil,
+            objectives = {
+                {type = "FIRST_HISTORICAL_MOMENT", id = "MOMENT_TRADING_POST_CONSTRUCTED_IN_EVERY_CIV_FIRST_IN_WORLD"},
+                {type = "MOMENT_COUNT", id = "MOMENT_CITY_TRANSFERRED_PLAYER_DEFEATED", count = 1},
+                {type = "FIRST_HISTORICAL_MOMENT", id = "MOMENT_PROJECT_FOUNDED_OPERATION_IVY"},
+            },
+            score = 1
+        },
+        {
+            id = "TECH_DOMINANCE",
+            index = "3",
+            year = nil,
+            era = nil,
+            objectives = {
+                {type = "FIRST_HISTORICAL_MOMENT", id = "MOMENT_CITY_SIZE_EXTRA_LARGE_FIRST_IN_WORLD"},
+                {type = "FIRST_HISTORICAL_MOMENT", id = "MOMENT_ROUTE_CREATED_RAILROAD_CONNECTS_TWO_CITIES_FIRST_IN_WORLD"},
+                {type = "FIRST_HISTORICAL_MOMENT", id = "MOMENT_PROJECT_FOUNDED_MOON_LANDING_FIRST_IN_WORLD"},
+            },
+            score = 1
+        },
+    },
 
     -- LEADERS
     LEADER_ABRAHAM_LINCOLN = {
@@ -18,7 +57,7 @@ HSD_victoryConditionsConfig = {
             era = nil,
             objectives = {
                 {type = "WONDER_BUILT", id = "BUILDING_STATUE_LIBERTY"},
-                {type = "FIRST_TECH_RESEARCHED", id = "TECH_FLIGHT"},
+                {type = "FIRST_HISTORICAL_MOMENT", id = "MOMENT_UNIT_CREATED_FIRST_DOMAIN_AIR_IN_WORLD"},
                 {type = "GREAT_PEOPLE_ACTIVATED", count = 10},
             },
             score = 1
@@ -41,7 +80,7 @@ HSD_victoryConditionsConfig = {
             era = "ERA_MODERN",
             objectives = {
                 {type = "FIRST_GOVERNMENT", id = "GOVERNMENT_DEMOCRACY"},
-                {type = "HIGHEST_PRODUCTION"},
+                {type = "MOMENT_COUNT", id = "MOMENT_PLAYER_LEVIED_MILITARY", count = 4},
                 {type = "UNIT_KILL_COUNT", id = "UNIT_AMERICAN_P51", count = 10},
             },
             score = 1
@@ -167,7 +206,7 @@ HSD_victoryConditionsConfig = {
             year = nil,
             era = "ERA_RENAISSANCE",
             objectives = {
-                {type = "CONVERT_ALL_CITIES"},
+                {type = "ALL_CITIES_FOLLOW_SAME_RELIGION"},
                 {type = "GREAT_WORK_TYPE_COUNT", id = "GREATWORKOBJECT_WRITING", count = 6},
                 {type = "GOLD_COUNT", count = 4000},
             },
@@ -257,7 +296,7 @@ HSD_victoryConditionsConfig = {
 			era = "ERA_MEDIEVAL",
             objectives = {
                 {type = "SUZERAINTY_COUNT", count = 4},
-                {type = "MOMENT_COUNT", id = "MOMENT_PLAYER_LEVIED_MILITARY", count = 4}
+                {type = "MOMENT_COUNT", id = "MOMENT_PLAYER_LEVIED_MILITARY", count = 4},
             },
             score = 1
         },
@@ -306,6 +345,7 @@ HSD_victoryConditionsConfig = {
 			era = nil,
             objectives = {
                 {type = "GOLD_COUNT", count = 10000},
+                {type = "MOMENT_COUNT", id = "MOMENT_BARBARIAN_CAMP_DESTROYED", count = 10},
             },
             score = 1
         },
@@ -437,6 +477,8 @@ HSD_victoryConditionsConfig = {
 			era = nil,
             objectives = {
 				{type = "UNIT_CONQUER_CITY_COUNT", id = "UNIT_ARABIAN_MAMLUK", count = 10},
+                {type = "UNIT_PILLAGE_COUNT", id = "UNIT_ARABIAN_MAMLUK", count = 20},
+                {type = "UNIT_KILL_COUNT", id = "UNIT_ARABIAN_MAMLUK", count = 30},
             },
             score = 1
         },
@@ -447,6 +489,8 @@ HSD_victoryConditionsConfig = {
 			era = "ERA_MEDIEVAL",
             objectives = {
                 {type = "HOLY_CITY_COUNT", count = 4},
+                {type = "MOMENT_COUNT", id = "MOMENT_CITY_CHANGED_RELIGION_OTHER_HOLY_CITY", count = 3},
+                {type = "FIRST_HISTORICAL_MOMENT", id = "MOMENT_BELIEF_ADDED_MAX_BELIEFS_REACHED"},
             },
             score = 1
         },
@@ -474,7 +518,7 @@ HSD_victoryConditionsConfig = {
             objectives = {
                 {type = "CITY_COUNT", count = 10},
                 {type = "CITY_COUNT_FOREIGN_CONTINENT", count = 5},
-                {type = "OCCUPIED_CAPITAL_COUNT", count = 5},
+                {type = "OCCUPIED_CAPITAL_COUNT", count = 3},
             },
         },
         {
@@ -495,7 +539,7 @@ HSD_victoryConditionsConfig = {
             objectives = {
                 {type = "HIGHEST_CULTURE"},
                 {type = "BUILDING_COUNT", id = "BUILDING_GRAND_BAZAAR", count = 7},
-                {type = "HAPPIEST_POPULATION"},
+                {type = "HIGHEST_GOLD_PER_TURN"},
             },
         },
     },
@@ -711,6 +755,7 @@ HSD_victoryConditionsConfig = {
             objectives = {
                 {type = "WONDER_BUILT", id = "BUILDING_PETRA"},
                 {type = "MOST_ACTIVE_TRADE_ROUTES"},
+                {type = "UNIT_PILLAGE_COUNT", id = "UNIT_ARABIAN_MAMLUK", count = 15},
             },
             score = 1
         },
@@ -722,6 +767,7 @@ HSD_victoryConditionsConfig = {
             objectives = {
                 {type = "BUILDING_COUNT", id = "BUILDING_MADRASA", count = 4},
                 {type = "GREAT_PERSON_ERA_COUNT", id = "ERA_MEDIEVAL", count = 4},
+                {type = "HIGHEST_CULTURE"},
             },
             score = 1
         },
@@ -733,6 +779,7 @@ HSD_victoryConditionsConfig = {
             objectives = {
                 {type = "MOST_CITIES_FOLLOWING_RELIGION"},
                 {type = "HIGHEST_FAITH_PER_TURN"},
+                {type = "MOMENT_COUNT", id = "MOMENT_CITY_CHANGED_RELIGION_OTHER_HOLY_CITY", count = 3},
             },
             score = 1
         },
@@ -741,13 +788,13 @@ HSD_victoryConditionsConfig = {
 
     CIVILIZATION_AUSTRALIA = {
         {
-            id = "GREAT_SOUTHERN_LAND",
+            id = "RED_CONTINENT",
             index = "1",
             year = nil,
             era = "ERA_MODERN",
             objectives = {
                 {type = "IMPROVEMENT_COUNT", id = "IMPROVEMENT_OUTBACK_STATION", count = 10},
-                {type = "COASTAL_CITY_COUNT", count = 7},
+                {type = "TERRITORY_CONTROL", territory = "DESERT", minimumSize = 10},
                 {type = "NATURAL_WONDER_COUNT", count = 2},
             },
             score = 1
@@ -758,8 +805,9 @@ HSD_victoryConditionsConfig = {
             year = nil,
             era = nil,
             objectives = {
-                {type = "UNIT_KILL_COUNT", id = "UNIT_DIGGER", count = 10},
+                {type = "UNIT_PROMOTION_LEVEL", id = "UNIT_DIGGER", count = 2, level = 8},
                 {type = "MAXIMUM_ALLIANCE_LEVEL_COUNT", count = 3},
+                {type = "MOMENT_COUNT", id = "MOMENT_CITY_TRANSFERRED_TO_ORIGINAL_OWNER", count = 3},
             },
             score = 1
         },
@@ -863,6 +911,7 @@ HSD_victoryConditionsConfig = {
             era = nil,
             objectives = {
                 {type = "FEATURE_COUNT", id = "FEATURE_JUNGLE", count = 40},
+                {type = "CONTROL_ALL_ADJACENT_RIVER_TO_CAPITAL"},
             },
             score = 1
         },
@@ -872,7 +921,7 @@ HSD_victoryConditionsConfig = {
             year = nil,
             era = nil,
             objectives = {
-                {type = "HAPPIEST_POPULATION"},
+                {type = "FIRST_HISTORICAL_MOMENT", id = "MOMENT_BUILDING_CONSTRUCTED_FULL_ENTERTAINMENT_COMPLEX_FIRST"},
                 {type = "PROJECT_COUNT", id = "PROJECT_CARNIVAL", count = 10},
                 {type = "PROJECT_COUNT", id = "PROJECT_WATER_CARNIVAL", count = 10},
             },
@@ -924,7 +973,7 @@ HSD_victoryConditionsConfig = {
             objectives = {
                 {type = "UNIT_KILL_COUNT", id = "UNIT_BYZANTINE_DROMON", count = 20},
                 {type = "COASTAL_CITY_COUNT", count = 10},
-                {type = "TERRITORY_CONTROL", territory = "SEA", minSize = 6},
+                {type = "TERRITORY_CONTROL", territory = "SEA", minimumSize = 6},
             },
             score = 1
         },
@@ -1042,6 +1091,7 @@ HSD_victoryConditionsConfig = {
             era = nil,
             objectives = {
                 {type = "RESOURCE_MONOPOLY", id = "RESOURCE_FURS", percent = 60},
+                {type = "CONTROL_ALL_ADJACENT_RIVER_TO_CAPITAL"},
             },
             score = 1
         },
@@ -1119,7 +1169,7 @@ HSD_victoryConditionsConfig = {
             objectives = {
                 {type = "CITY_COUNT_EVERY_CONTINENT", count = 1},
                 {type = "CITY_COUNT_FOREIGN_CONTINENT", count = 10},
-                {type = "MOST_UNIT_DOMAIN_TYPE", id = "DOMAIN_SEA"},
+                {type = "MOMENT_COUNT", id = "MOMENT_SHIP_SUNK", count = 50},
             },
             score = 1
         },
@@ -1145,7 +1195,7 @@ HSD_victoryConditionsConfig = {
             era = "ERA_MEDIEVAL",
             objectives = {
                 {type = "HIGHEST_FAITH_PER_TURN"},
-                {type = "ALL_CITIES_FOLLOW_RELIGION"},
+                {type = "CONVERT_ALL_CITIES"},
                 {type = "IMPROVEMENT_COUNT", id = "IMPROVEMENT_ROCK_HEWN_CHURCH", count = 5},
             },
             score = 1
@@ -1213,30 +1263,31 @@ HSD_victoryConditionsConfig = {
             objectives = {
                 {type = "BUILDING_COUNT", id = "BUILDING_ORACLE", count = 1},
 				{type = "BUILDING_COUNT", id = "BUILDING_STONEHENGE", count = 1},
-                {type = "FEATURE_COUNT", id = "FEATURE_FOREST", count = 5},
+                {type = "FEATURE_COUNT", id = "FEATURE_FOREST", count = 10},
             },
             score = 1
         },
         {
-            id = "CELTIC_MIGRATIONS",
+            id = "LA_TENE_CULTURE",
 			index = "2",
             year = -50,
-            yearLimit = "ON_YEAR",
             era = nil,
             objectives = {
-                {type = "BORDERING_CITY_COUNT", count = 5},
-                {type = "GOLD_COUNT", count = 1000},
+                {type = "MOMENT_COUNT", id = "MOMENT_CITY_BUILT_NEAR_OTHER_CIV_CITY", count = 5},
+                {type = "MOMENT_COUNT", id = "MOMENT_CITY_BUILT_BECAME_LARGEST_CIV_BY_MARGIN", count = 1},
+                {type = "UNIT_PILLAGE_COUNT", id = "UNIT_GAUL_GAESATAE", count = 10},
             },
             score = 1
         },
         {
-            id = "PAINTED_WARRIORS",
+            id = "TORC_AND_CARNYX",
 			index = "3",
 			year = nil,
 			era = nil,
             objectives = {
                 {type = "UNIT_KILL_COUNT", id = "UNIT_GAUL_GAESATAE", count = 20},
-                {type = "UNIT_PILLAGE_COUNT", id = "UNIT_GAUL_GAESATAE", count = 10},
+                {type = "UNIT_KILL_ERA_DIFFERENCE", id = "UNIT_GAUL_GAESATAE", count = 2},
+                {type = "TRADING_POST_WITH_ALL_PLAYERS_CONTINENT"},
             },
             score = 1
         },
@@ -1289,7 +1340,7 @@ HSD_victoryConditionsConfig = {
             year = nil,
 			era = "ERA_RENAISSANCE",
             objectives = {
-                {type = "CONVERT_ALL_CITIES"},
+                {type = "ALL_CITIES_FOLLOW_SAME_RELIGION"},
 				{type = "OCCUPIED_CAPITAL_COUNT", count = 3},
             },
             score = 1
@@ -1322,7 +1373,7 @@ HSD_victoryConditionsConfig = {
 
     CIVILIZATION_GREECE = {
         {
-			id = "CLASSICAL_AGE",
+			id = "AGE_OF_PERICLES",
 			index = "1",
             year = nil,
 			era = "ERA_CLASSICAL",
@@ -1444,6 +1495,7 @@ HSD_victoryConditionsConfig = {
             objectives = {
                 {type = "UNIT_KILL_COUNT", id = "UNIT_INDIAN_VARU", count = 10},
                 {type = "IMPROVEMENT_COUNT", id = "IMPROVEMENT_STEPWELL", count = 5},
+                {type = "MOMENT_COUNT", id = "MOMENT_CITY_BUILT_BECAME_LARGEST_CIV_BY_MARGIN", count = 1},
             },
             score = 1
         },
@@ -1571,7 +1623,7 @@ HSD_victoryConditionsConfig = {
             year = nil,
             era = "ERA_MEDIEVAL",
             objectives = {
-                {type = "DISTRICT_COUNT", id = "DISTRICT_PRASAT", count = 4},
+                {type = "BUILDING_COUNT", id = "BUILDING_PRASAT", count = 4},
                 {type = "CONVERT_ALL_CITIES"},
                 {type = "HIGHEST_FAITH_PER_TURN"},
             },
@@ -1599,8 +1651,9 @@ HSD_victoryConditionsConfig = {
             year = nil,
             era = "ERA_RENAISSANCE",
             objectives = {
-                {type = "HIGHEST_POPULATION_CITY"},
-                {type = "CONVERT_ALL_CITIES"},
+                {type = "HIGHEST_CITY_POPULATION"},
+                {type = "ALL_CITIES_FOLLOW_SAME_RELIGION"},
+                {type = "DISTRICT_COUNT", id = "DISTRICT_MBANZA", count = 10},
             },
             score = 1
         },
@@ -1751,7 +1804,7 @@ HSD_victoryConditionsConfig = {
             year = nil,
             era = nil,
             objectives = {
-                {type = "UNIT_KILL_COUNT", id = "TOA", count = 20},
+                {type = "UNIT_KILL_COUNT", id = "UNIT_MAORI_TOA", count = 20},
                 {type = "IMPROVEMENT_COUNT", id = "IMPROVEMENT_PA", count = 10},
                 {type = "BUILDING_COUNT", id = "BUILDING_MARAE", count = 5},
             },
@@ -1765,7 +1818,7 @@ HSD_victoryConditionsConfig = {
             objectives = {
                 {type = "FEATURE_COUNT", id = "FEATURE_VOLCANO", count = 5},
                 {type = "FEATURE_COUNT", id = "FEATURE_REEF", count = 10},
-                {type = "FEATURE_COUNT", id = "FEATURE_JUNGLE", count = 20},
+                {type = "NATURAL_WONDER_COUNT", count = 1},
             },
             score = 1
         },
@@ -1776,8 +1829,8 @@ HSD_victoryConditionsConfig = {
             era = nil,
             objectives = {
                 {type = "MOST_WATER_PLOTS_CONTROL"},
-                {type = "SEA_TERRITORY_SIZE", name = "Named Sea", size = 6},
-                {type = "COASTAL_CITY_COUNT", count = 10},
+                {type = "TERRITORY_CONTROL", territory = "SEA", minimumSize = 6},
+                {type = "MOMENT_COUNT", id = "MOMENT_FIND_NEW_CONTINENT_FIRST_IN_WORLD", count = 1},
             },
             score = 1
         },
@@ -1915,7 +1968,7 @@ HSD_victoryConditionsConfig = {
             era = nil,
             objectives = {
                 {type = "IMPROVEMENT_COUNT", id = "IMPROVEMENT_POLDER", count = 6},
-                {type = "GREAT_WORK_TYPE_COUNT", id = "GREATWORKOBJECT_ART", count = 10},
+                {type = "GREAT_WORK_ART_COUNT", count = 10},
             },
             score = 1
         },
@@ -1990,7 +2043,7 @@ HSD_victoryConditionsConfig = {
             era = nil,
             objectives = {
                 {type = "UNIT_KILL_COUNT", id = "UNIT_NUBIAN_PITATI", count = 20},
-                {type = "UNIT_PROMOTION_LEVEL", id = "UNIT_NUBIAN_PITATI", count = 1, level = 8},
+                {type = "UNIT_PROMOTION_LEVEL", id = "UNIT_NUBIAN_PITATI", count = 2, level = 8},
             },
             score = 1
         },
@@ -2001,7 +2054,7 @@ HSD_victoryConditionsConfig = {
 			era = nil,
             objectives = {
                 {type = "WONDER_ADJACENT_IMPROVEMENT", id = "BUILDING_JEBEL_BARKAL", improvement = "IMPROVEMENT_PYRAMID"},
-                {type = "IMPROVEMENT_PYRAMID", count = 10},
+                {type = "IMPROVEMENT_COUNT", id = "IMPROVEMENT_PYRAMID", count = 10},
                 {type = "GOLD_COUNT", count = 6000},
             },
             score = 1
@@ -2130,7 +2183,7 @@ HSD_victoryConditionsConfig = {
             objectives = {
                 {type = "HIGHEST_FAITH_PER_TURN"},
                 {type = "GREAT_WORK_TYPE_COUNT", id = "GREATWORKOBJECT_RELIC", count = 6},
-                {type = "CONVERT_ALL_CITIES"},
+                {type = "ALL_CITIES_FOLLOW_SAME_RELIGION"},
             },
             score = 1
         },
@@ -2162,14 +2215,14 @@ HSD_victoryConditionsConfig = {
 
     CIVILIZATION_PORTUGAL = {
         {
-            id = "FIRST_EMPIRE",
+            id = "CASA_DA_INDIA",
             index = "1",
             year = 1580,
             era = nil,
             objectives = {
                 {type = "CITY_COUNT_FOREIGN_CONTINENT", count = 5},
                 {type = "WONDER_BUILT", id = "BUILDING_TORRE_DE_BELEM"},
-                {type = "IMPROVEMENT_COUNT", id = "IMPROVEMENT_FEITORIA", count = 10},
+                {type = "IMPROVEMENT_COUNT", id = "IMPROVEMENT_FEITORIA", count = 5},
             },
             score = 1
         },
@@ -2192,7 +2245,8 @@ HSD_victoryConditionsConfig = {
             era = nil,
             objectives = {
                 {type = "CITY_COUNT_FOREIGN_CONTINENT", count = 10},
-                {type = "CONVERT_ALL_CITIES"},
+                {type = "ALL_CITIES_FOLLOW_SAME_RELIGION"},
+                {type = "FIRST_HISTORICAL_MOMENT", id = "MOMENT_TRADING_POST_CONSTRUCTED_IN_EVERY_CIV_FIRST_IN_WORLD"},
             },
             score = 1
         },
@@ -2360,14 +2414,14 @@ HSD_victoryConditionsConfig = {
             year = nil,
 			era = nil,
             objectives = {
-                {type = "UNIT_KILL_COUNT", id = "UNIT_SPANISH_CONQUISTADOR", count = 10},
+                {type = "UNIT_KILL_COUNT", id = "UNIT_SPANISH_CONQUISTADOR", count = 20},
                 {type = "UNIT_CONQUER_CITY_COUNT", id = "UNIT_SPANISH_CONQUISTADOR", count = 5},
                 {type = "MOMENT_COUNT", id = "MOMENT_INQUISITION_LAUNCHED", count = 5},
             },
             score = 1
         },
         {
-            id = "AGE_OF_DISCOVERY",
+            id = "TREATY_OF_TORDESILLAS",
 			index = "2",
             year = 1650,
             era = nil,
@@ -2391,6 +2445,45 @@ HSD_victoryConditionsConfig = {
             score = 1
         },
 		-- end of victory conditions
+    },
+
+    CIVILIZATION_SWEDEN = {
+        {
+			id = "VASA_DYNASTY",
+			index = "1",
+            year = nil,
+			era = "ERA_RENAISSANCE",
+            objectives = {
+                {type = "GREAT_WORK_COUNT", count = 10},
+                {type = "UNIT_KILL_COUNT", id = "UNIT_SWEDEN_CAROLEAN", count = 10},
+                {type = "GREAT_PERSON_TYPE_FROM_ERA", id = "GREAT_PERSON_CLASS_GENERAL", era = "ERA_RENAISSANCE", count = 1},
+            },
+            score = 1
+        },
+        {
+			id = "SWEDISH_EMPIRE",
+			index = "2",
+            year = nil,
+			era = "ERA_INDUSTRIAL",
+            objectives = {
+                {type = "IMPROVEMENT_YIELD_COUNT", id = "IMPROVEMENT_OPEN_AIR_MUSEUM", yield = "YIELD_CULTURE", count = 10},
+                {type = "TERRITORY_CONTROL", territory = "SEA", minimumSize = 6},
+            },
+            score = 1
+        },
+        {
+			id = "NORDIC_MODEL",
+			index = "3",
+            year = nil,
+			era = "ERA_MODERN",
+            objectives = {
+                {type = "MAXIMUM_ALLIANCE_LEVEL_COUNT", count = 3},
+                {type = "HAPPIEST_POPULATION"},
+                {type = "GREAT_PERSON_TYPE_FROM_ERA", id = "GREAT_PERSON_CLASS_SCIENTIST", era = "ERA_MODERN", count = 1},
+            },
+            score = 1
+        },
+        --end of victory conditions
     },
 
     CIVILIZATION_SUMERIA = {
@@ -2431,6 +2524,46 @@ HSD_victoryConditionsConfig = {
 		-- end of victory conditions
     },
 
+    CIVILIZATION_VIETNAM = {
+        {
+			id = "VIETNAMESE_RESISTANCE",
+			index = "1",
+            year = nil,
+			era = nil,
+            objectives = {
+                {type = "UNIT_KILL_COUNT", id = "UNIT_VIETNAMESE_VOI_CHIEN", count = 20},
+                {type = "MOMENT_COUNT", id = "MOMENT_UNIT_KILLED_UNDERDOG_MILITARY_FORMATION", count = 1},
+                {type = "MOMENT_COUNT", id = "MOMENT_UNIT_KILLED_UNDERDOG_PROMOTIONS", count = 1},
+            },
+            score = 1
+        },
+        {
+			id = "LY_DYNASTY",
+			index = "2",
+            year = nil,
+			era = "ERA_MEDIEVAL",
+            objectives = {
+                {type = "HIGHEST_CULTURE"},
+                {type = "ALL_CITIES_FOLLOW_SAME_RELIGION"},
+                {type = "DISTRICT_COUNT", id = "DISTRICT_THANH", count = 6},
+            },
+            score = 1
+        },
+        {
+			id = "NGUYEN_DYNASTY",
+			index = "3",
+            year = nil,
+			era = "ERA_INDUSTRIAL",
+            objectives = {
+                {type = "CONTROL_ALL_ADJACENT_RIVER_TO_CAPITAL"},
+                {type = "TERRITORY_CONTROL", territory = "SEA", minimumSize = 4},
+                {type = "TERRITORY_CONTROL", territory = "MOUNTAIN", minimumSize = 4},
+            },
+            score = 1
+        },
+        -- end of victory conditions
+    },
+
     CIVILIZATION_ZULU = {
         {
             id = "ISANDLWANA",
@@ -2448,7 +2581,7 @@ HSD_victoryConditionsConfig = {
             year = nil,
             era = nil,
             objectives = {
-                {type = "RESOURCE_MONOPOLY", id = "CATTLE", percent = 60},
+                {type = "RESOURCE_MONOPOLY", id = "RESOURCE_CATTLE", percent = 60},
             },
             score = 1
         },

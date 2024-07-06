@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 -- ===========================================================================
 --	Historical Victory Scripts
 -- ===========================================================================
@@ -29,9 +30,12 @@ ExposedMembers.HSD_GetTourismCounts = {}
 ExposedMembers.HSD_GetPlotYield = {}
 ExposedMembers.HSD_GetGreatWorksCount = {}
 ExposedMembers.HSD_GetGreatWorkTypeCount = {}
+ExposedMembers.HSD_GetGreatWorkOfArtCount = {}
 ExposedMembers.HSD_GetNumBeliefs = {}
 ExposedMembers.HSD_GetGoldenAge = {}
 ExposedMembers.HSD_GetMomentData = {}
+ExposedMembers.HSD_GetAllianceLevelCount = {}
+ExposedMembers.HSD_GetAllianceCount = {}
 
 -- ===========================================================================
 -- Variables
@@ -1535,72 +1539,6 @@ local function GetTradeRoutesCount(playerID)
     return playerTradeRoutes, highestTradeRouteCount
 end
 
-local function GetCitiesWithTradingPosts(playerID)
-    local player = Players[playerID]
-    local playerCities = player:GetCities()
-    local citiesWithTradingPosts = 0
-    local totalCities = 0
-
-    for _, city in playerCities:Members() do
-        totalCities = totalCities + 1
-        local hasTradingPost = ExposedMembers.HSD_GetTradingPost(city, playerID)
-        if hasTradingPost then
-            citiesWithTradingPosts = citiesWithTradingPosts + 1
-        end
-    end
-
-    return citiesWithTradingPosts, totalCities
-end
-
-local function HasTradeRouteWithEveryPlayerOnContinent(playerID)
-    local player = Players[playerID]
-    local playerCities = player:GetCities()
-    local playerContinent = nil
-    local playersOnContinent = {}
-    local continentPlayersWithTradingPost = 0
-    
-    -- Determine the player's home continent by checking their capital city's continent
-    local capitalCity = playerCities:GetCapitalCity()
-    if capitalCity then
-        local capitalX, capitalY = capitalCity:GetX(), capitalCity:GetY()
-        local capitalPlot = Map.GetPlot(capitalX, capitalY)
-        playerContinent = capitalCity:GetPlot():GetContinentType()
-    end
-    
-    -- If the player's capital city's continent is not found, return counts as zero
-    if not playerContinent then
-        print("No home continent found for the player.")
-        return 0, 0
-    end
-    
-    -- Track all players with cities on the player's home continent
-    for _, otherPlayerID in ipairs(PlayerManager.GetAliveIDs()) do
-        local otherPlayer = Players[otherPlayerID]
-        if (otherPlayerID ~= playerID) and (not otherPlayer:IsBarbarian()) and (not IsFreeCityPlayer(otherPlayer)) then
-            local otherPlayerCities = Players[otherPlayerID]:GetCities()
-            for _, city in otherPlayerCities:Members() do
-                if city:GetContinentType() == playerContinent then
-                    if not playersOnContinent[otherPlayerID] then
-                        playersOnContinent[otherPlayerID] = true
-                    end
-                    local hasTradingPost = ExposedMembers.HSD_GetTradingPostFromPlayer(otherplayerID, playerID)
-                    if hasTradingPost then
-                        continentPlayersWithTradingPost = continentPlayersWithTradingPost + 1
-                        break -- Found a trading post in this city, no need to check more of their cities
-                    end
-                end
-            end
-        end
-    end
-
-    local totalPlayersOnContinent = 0
-    for _ in pairs(playersOnContinent) do
-        totalPlayersOnContinent = totalPlayersOnContinent + 1
-    end
-    
-    return continentPlayersWithTradingPost, totalPlayersOnContinent
-end
-
 local function HasUnlockedAllCivicsForEra(playerID, eraType)
     local player = Players[playerID]
     local playerCulture = player:GetCulture()
@@ -1948,7 +1886,7 @@ local function GetAllianceCount(playerID)
 
     for _, otherPlayerID in ipairs(PlayerManager.GetAliveMajorIDs()) do
         if otherPlayerID ~= playerID then
-            if playerDiplomacy:HasAlliance(otherPlayerID) then
+            if playerDiplomacy:GetAllianceType(otherPlayerID) ~= -1 then
                 allianceCount = allianceCount + 1
             end
         end
@@ -1965,7 +1903,7 @@ local function GetAllianceCount_AllPlayers(targetAllianceCount)
 
     -- Iterate through all alive major players
     for _, playerID in ipairs(PlayerManager.GetAliveMajorIDs()) do
-        local allianceCount = GetAllianceCount(playerID)
+        local allianceCount = ExposedMembers.HSD_GetAllianceCount(playerID)
 
         -- Check if the player has reached the target alliance count
         if allianceCount >= targetAllianceCount then
@@ -1983,8 +1921,9 @@ local function GetAllianceLevelCount(playerID)
 
     for _, otherPlayerID in ipairs(PlayerManager.GetAliveMajorIDs()) do
         if otherPlayerID ~= playerID then
-            if playerDiplomacy:HasAlliance(otherPlayerID) then
-                local allianceLevel = playerDiplomacy:GetAllianceLevel()
+            if playerDiplomacy:GetAllianceType(otherPlayerID) ~= -1 then
+                print("Alliance type is "..tostring(playerDiplomacy:GetAllianceType(otherPlayerID)))
+                local allianceLevel = playerDiplomacy:GetAllianceLevel(otherPlayerID)
                 print("Alliance level is "..tostring(allianceLevel))
                 if allianceLevel == maximumAllianceLevel then
                     allianceCount = allianceCount + 1
@@ -2162,7 +2101,7 @@ local function GetCitiesFollowingReligion(playerID)
         local cityReligion = city:GetReligion():GetMajorityReligion()
 
         -- Check if the city's majority religion matches the player's majority religion
-        if cityReligion == religionID then
+        if (cityReligion ~= -1) and (cityReligion == religionID) then
             citiesFollowingReligion = citiesFollowingReligion + 1
         end
     end
@@ -2211,6 +2150,33 @@ local function GetCitiesOnHomeContinentFollowingReligion(playerID)
     end
 
     return religiousCitiesCount, nonReligiousCitiesCount
+end
+
+local function GetCitiesFollowingAnyReligion(playerID)
+    local player = Players[playerID]
+    local religionCounts = {}
+    local totalCities = 0
+
+    -- Iterate through player cities
+    for _, city in player:GetCities():Members() do
+        totalCities = totalCities + 1
+        local cityReligion = city:GetReligion():GetMajorityReligion()
+
+        -- Initialize or increment the count for this religion
+        if cityReligion > 0 then
+            religionCounts[cityReligion] = (religionCounts[cityReligion] or 0) + 1
+        end
+    end
+
+    -- Find the highest count of cities following the same religion
+    local maxCitiesFollowingReligion = 0
+    for _, count in pairs(religionCounts) do
+        if count > maxCitiesFollowingReligion then
+            maxCitiesFollowingReligion = count
+        end
+    end
+
+    return maxCitiesFollowingReligion, totalCities
 end
 
 local function GetGoldenAgeCount(playerID)
@@ -2777,8 +2743,10 @@ function EvaluateObjectives(player, condition)
 		if obj.type == "2_WONDERS_IN_CITY" then
 			current = AreTwoWondersInSameCity(playerID, obj.firstID, obj.secondID) and 1 or 0
 			total = 1
-		elseif obj.type == "ALLIANCE_COUNT" then
-			current = GetAllianceCount(playerID)
+        elseif obj.type == "ALL_CITIES_FOLLOW_SAME_RELIGION" then
+            current, total = GetCitiesFollowingAnyReligion(playerID)
+        elseif obj.type == "ALLIANCE_COUNT" then
+			current = ExposedMembers.HSD_GetAllianceCount(playerID)
 			total = obj.count
         elseif obj.type == "BORDERING_CITY_COUNT" then
 			current = GetBorderingCitiesCount(playerID)
@@ -2905,6 +2873,9 @@ function EvaluateObjectives(player, condition)
         elseif obj.type == "GREAT_WORK_COUNT" then
             current = ExposedMembers.HSD_GetGreatWorksCount(playerID)
             total = obj.count
+        elseif obj.type == "GREAT_WORK_ART_COUNT" then
+            current = ExposedMembers.HSD_GetGreatWorkOfArtCount(playerID)
+            total = obj.count
         elseif obj.type == "GREAT_WORK_TYPE_COUNT" then
             current = ExposedMembers.HSD_GetGreatWorkTypeCount(playerID, obj.id)
             total = obj.count
@@ -2946,8 +2917,8 @@ function EvaluateObjectives(player, condition)
         elseif obj.type == "LOYALTY_CONVERT_CITY_COUNT" then -- UNTESTED
 			current = Game:GetProperty("HSD_"..tostring(obj.type).."_"..tostring(playerID)) or 0
 			total = obj.count
-		elseif obj.type == "MAXIMUM_ALLIANCE_LEVEL_COUNT" then -- UNTESTED
-			current = GetAllianceLevelCount(playerID)
+		elseif obj.type == "MAXIMUM_ALLIANCE_LEVEL_COUNT" then
+			current = ExposedMembers.HSD_GetAllianceLevelCount(playerID)
 			total = obj.count
 		elseif obj.type == "MINIMUM_CONTINENT_TECH_COUNT" then
             isGreaterThan = true
@@ -2955,7 +2926,7 @@ function EvaluateObjectives(player, condition)
         elseif obj.type == "MOMENT_COUNT" then
             current = player:GetProperty("HSD_"..tostring(obj.id).."_COUNT") or 0
             total = obj.count
-		elseif obj.type == "MOST_ACTIVE_TRADEROUTES_ALL" then
+		elseif obj.type == "MOST_ACTIVE_TRADE_ROUTES" then
             isGreaterThan = true
 			current, total = GetTradeRoutesCount(playerID)
 		elseif obj.type == "MOST_ARCTIC_TERRAIN" then
