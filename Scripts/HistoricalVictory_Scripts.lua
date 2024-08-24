@@ -1895,6 +1895,7 @@ local function GetAllianceCount(playerID)
     return allianceCount
 end
 
+-- NOT WORKING ; DO NOT USE
 local function GetAllianceCount_AllPlayers(targetAllianceCount)
     -- Check if the game property is already set
     if Game:GetProperty("HSD_"..tostring(targetAllianceCount).."_ACTIVE_ALLIANCES") then
@@ -1903,14 +1904,16 @@ local function GetAllianceCount_AllPlayers(targetAllianceCount)
 
     -- Iterate through all alive major players
     for _, playerID in ipairs(PlayerManager.GetAliveMajorIDs()) do
-        local allianceCount = ExposedMembers.HSD_GetAllianceCount(playerID)
+		if IsHistoricalVictoryPlayer(playerID) and not IsCityState(playerID) then
+			local allianceCount = ExposedMembers.HSD_GetAllianceCount(playerID)
 
-        -- Check if the player has reached the target alliance count
-        if allianceCount >= targetAllianceCount then
-            -- Set the game property with this player's ID
-            Game:SetProperty("HSD_"..tostring(targetAllianceCount).."_ACTIVE_ALLIANCES", playerID)
-            return Game:GetProperty("HSD_"..tostring(targetAllianceCount).."_ACTIVE_ALLIANCES") -- Exit the loop as we found the first player to reach the target
-        end
+			-- Check if the player has reached the target alliance count
+			if allianceCount >= targetAllianceCount then
+				-- Set the game property with this player's ID
+				Game:SetProperty("HSD_"..tostring(targetAllianceCount).."_ACTIVE_ALLIANCES", playerID)
+				return Game:GetProperty("HSD_"..tostring(targetAllianceCount).."_ACTIVE_ALLIANCES") -- Exit the loop as we found the first player to reach the target
+			end
+		end
     end
 end
 
@@ -2814,7 +2817,7 @@ function EvaluateObjectives(player, condition)
             isPlayerProperty = true
             current = Game:GetProperty("HSD_"..tostring(obj.id)) or -1 --playerID nil check
             total = playerID
-		elseif obj.type == "FIRST_NUM_ACTIVE_ALLIANCES" then
+		elseif obj.type == "FIRST_NUM_ACTIVE_ALLIANCES" then -- NOT WORKING ; DO NOT USE
             isPlayerProperty = true
 			current = GetAllianceCount_AllPlayers(obj.count)
 			total = playerID

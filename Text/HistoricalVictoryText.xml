@@ -106,6 +106,10 @@
 	<Replace Tag="LOC_HSD_ALLIANCE_COUNT" Language="en_US">
 	  <Text>Have {1_count} alliances</Text>
 	</Replace>
+	
+	<Replace Tag="LOC_HSD_ALL_CITIES_FOLLOW_SAME_RELIGION" Language="en_US">
+	  <Text>All your cities follow the same religion</Text>
+	</Replace>
 
 	<Replace Tag="LOC_HSD_BORDERING_CITY_COUNT" Language="en_US">
 	  <Text>Own {1_count} cities bordering other players</Text>
@@ -271,6 +275,10 @@
 	  <Text>Own {1_count} Great Works</Text>
 	</Replace>
 	
+	<Replace Tag="LOC_HSD_GREAT_WORK_ART_COUNT" Language="en_US">
+	  <Text>Own {1_count} Great Works of Art</Text>
+	</Replace>
+	
 	<Replace Tag="LOC_HSD_GREAT_WORK_TYPE_COUNT" Language="en_US">
 	  <Text>Own {2_count} {1_greatWorkType}</Text>
 	</Replace>	
@@ -284,23 +292,27 @@
 	</Replace>
 	
 	<Replace Tag="LOC_HSD_HIGHEST_CULTURE" Language="en_US">
-	  <Text>Have the highest culture per turn</Text>
+	  <Text>Most [ICON_CULTURE] per turn</Text>
 	</Replace>
 	
 	<Replace Tag="LOC_HSD_HIGHEST_FAITH_PER_TURN" Language="en_US">
-	  <Text>Have the highest faith per turn</Text>
+	  <Text>Most [ICON_FAITH] per turn</Text>
 	</Replace>
 	
 	<Replace Tag="LOC_HSD_HIGHEST_GOLD_PER_TURN" Language="en_US">
-	  <Text>Have the highest gold per turn</Text>
+	  <Text>Most [ICON_GOLD] per turn</Text>
+	</Replace>
+	
+	<Replace Tag="LOC_HSD_HIGHEST_PRODUCTION" Language="en_US">
+	  <Text>Most [ICON_PRODUCTION] per turn</Text>
 	</Replace>
 	
 	<Replace Tag="LOC_HSD_HIGHEST_TECH_COUNT" Language="en_US">
-	  <Text>Have the highest tech count</Text>
+	  <Text>Highest tech count</Text>
 	</Replace>
 	
 	<Replace Tag="LOC_HSD_HIGHEST_TOURISM" Language="en_US">
-	  <Text>Have the highest tourism count</Text>
+	  <Text>Highest total tourism</Text>
 	</Replace>
 	
 	<Replace Tag="LOC_HSD_HOLY_CITY_COUNT" Language="en_US">
@@ -395,8 +407,8 @@
 	  <Text>Occupy {1_count} capitals</Text>
 	</Replace>
 
-	<Replace Tag="LOC_HSD_PROJECT_COMPLETED" Language="en_US">
-	  <Text>Complete the {1_projectTypeName} project</Text>
+	<Replace Tag="LOC_HSD_PROJECT_FIRST_COMPLETED" Language="en_US">
+	  <Text>First to complete the {1_projectTypeName} project</Text>
 	</Replace>
 	
 	<Replace Tag="LOC_HSD_PROJECT_COUNT" Language="en_US">
@@ -480,7 +492,7 @@
 	</Replace>
 	
 	<Replace Tag="LOC_HSD_WONDER_BUILT_CITIES_IN_RANGE" Language="en_US">
-	  <Text>Build {2_count} cities in {3_range} plots of the {1_buildingTypeName}</Text>
+	  <Text>Own {2_count} cities in {3_range} plots of the {1_buildingTypeName}</Text>
 	</Replace>
 	
 	<Replace Tag="LOC_HSD_WONDER_CONTROL_ALL" Language="en_US">
@@ -495,12 +507,48 @@
 	<!-- HISTORICAL MOMENT OBJECTIVE TEXT -->
 	<!-- ----------------------------------->
 	
+	<Replace Tag="LOC_HSD_MOMENT_BARBARIAN_CAMP_DESTROYED_COUNT" Language="en_US">
+	  <Text>Clear {1_count} barbarian camps</Text>
+	</Replace>
+	
+	<Replace Tag="LOC_HSD_MOMENT_BUILDING_CONSTRUCTED_GAME_ERA_WONDER_COUNT" Language="en_US">
+	  <Text>Build {1_count} current era wonders</Text>
+	</Replace>
+	
+	<Replace Tag="LOC_HSD_MOMENT_CITY_BUILT_BECAME_LARGEST_CIV_BY_MARGIN_COUNT" Language="en_US">
+	  <Text>Own 3 more cities than next largest player</Text>
+	</Replace>
+	
+	<Replace Tag="LOC_HSD_MOMENT_CITY_BUILT_NEAR_OTHER_CIV_CITY_COUNT" Language="en_US">
+	  <Text>Build {1_count} cities with 5 plots of another player</Text>
+	</Replace>
+	
+	<Replace Tag="LOC_HSD_MOMENT_CITY_CHANGED_RELIGION_OTHER_HOLY_CITY_COUNT" Language="en_US">
+	  <Text>Convert {1_count} holy cities to your religion</Text>
+	</Replace>
+	
+	<Replace Tag="LOC_HSD_MOMENT_CITY_TRANSFERRED_PLAYER_DEFEATED_COUNT" Language="en_US">
+	  <Text>Defeat {1_count} players</Text>
+	</Replace>
+	
+	<Replace Tag="LOC_HSD_MOMENT_CITY_TRANSFERRED_TO_ORIGINAL_OWNER_COUNT" Language="en_US">
+	  <Text>Liberate {1_count} cities</Text>
+	</Replace>
+	
 	<Replace Tag="LOC_HSD_MOMENT_EMERGENCY_WON_AS_MEMBER_COUNT" Language="en_US">
 	  <Text>Win {1_count} emergencies as a member</Text>
 	</Replace>
 	
+	<Replace Tag="LOC_HSD_MOMENT_FIND_NEW_CONTINENT_FIRST_IN_WORLD_COUNT" Language="en_US">
+	  <Text>Find {1_count} undiscovered continents</Text>
+	</Replace>	
+	
 	<Replace Tag="LOC_HSD_MOMENT_FORMATION_ARMADA_FIRST_IN_WORLD" Language="en_US">
 	  <Text>First armada in the world</Text>
+	</Replace>
+	
+	<Replace Tag="LOC_HSD_MOMENT_GREAT_PERSON_CREATED_GAME_ERA_COUNT" Language="en_US">
+	  <Text>Recruit {1_count} Great People from current era</Text>
 	</Replace>
 	
 	<Replace Tag="LOC_HSD_MOMENT_INQUISITION_LAUNCHED_COUNT" Language="en_US">
@@ -513,6 +561,10 @@
 	
 	<Replace Tag="LOC_HSD_MOMENT_PLAYER_LEVIED_MILITARY_COUNT" Language="en_US">
 	  <Text>Levy a city-state {1_count} times</Text>
+	</Replace>
+	
+	<Replace Tag="LOC_HSD_MOMENT_SHIP_SUNK_COUNT" Language="en_US">
+	  <Text>Sink {1_count} ships</Text>
 	</Replace>
 	
 	<Replace Tag="LOC_HSD_MOMENT_SPY_MAX_LEVEL_COUNT" Language="en_US">
@@ -531,13 +583,36 @@
 	  <Text>Kill {1_count} units near a General</Text>
 	</Replace>
 	
+	<Replace Tag="LOC_HSD_MOMENT_UNIT_KILLED_UNDERDOG_MILITARY_FORMATION_COUNT" Language="en_US">
+	  <Text>Kill {1_count} units in larger formation than yours</Text>
+	</Replace>
+	
+	<Replace Tag="LOC_HSD_MOMENT_UNIT_KILLED_UNDERDOG_PROMOTIONS_COUNT" Language="en_US">
+	  <Text>Kill {1_count} units with 2+ promotions than yours</Text>
+	</Replace>
+	
 	<Replace Tag="LOC_HSD_MOMENT_WORLD_CIRCUMNAVIGATED_FIRST_IN_WORLD" Language="en_US">
 	  <Text>First to circumnavigate the world</Text>
+	</Replace>
+	
+	<Replace Tag="LOC_HSD_MOMENT_BUILDING_CONSTRUCTED_GAME_ERA_WONDER_COUNT" Language="en_US">
+	  <Text>Build {1_count} current era wonders</Text>
 	</Replace>
 	
 	<!-- ---------------------------->
 	<!-- CIVILIZATION VICTORY TEXT -->
 	<!-- ---------------------------->
+	
+	<!-- GENERIC -->
+	<Replace Tag="LOC_HSD_VICTORY_GENERIC_CIVILIZATION_1_NAME" Language="en_US">
+		<Text>Cultural Dominance</Text>
+	</Replace>
+	<Replace Tag="LOC_HSD_VICTORY_GENERIC_CIVILIZATION_2_NAME" Language="en_US">
+		<Text>Military Dominance</Text>
+	</Replace>
+	<Replace Tag="LOC_HSD_VICTORY_GENERIC_CIVILIZATION_3_NAME" Language="en_US">
+		<Text>Technological Dominance</Text>
+	</Replace>
 	
 	<!-- AMERICA -->
 	<Replace Tag="LOC_HSD_VICTORY_CIVILIZATION_AMERICA_1_NAME" Language="en_US">
@@ -563,7 +638,7 @@
 	
 	<!-- AUSTRALIA -->
 	<Replace Tag="LOC_HSD_VICTORY_CIVILIZATION_AUSTRALIA_1_NAME" Language="en_US">
-		<Text>Great Southern Land</Text>
+		<Text>Red Continent</Text>
 	</Replace>
 	<Replace Tag="LOC_HSD_VICTORY_CIVILIZATION_AUSTRALIA_2_NAME" Language="en_US">
 		<Text>ANZAC</Text>
@@ -695,13 +770,13 @@
 
 	<!-- GAUL -->
 	<Replace Tag="LOC_HSD_VICTORY_CIVILIZATION_GAUL_1_NAME" Language="en_US">
-	  <Text>Classical Age</Text>
+	  <Text>Druidic Lore</Text>
 	</Replace>
 	<Replace Tag="LOC_HSD_VICTORY_CIVILIZATION_GAUL_2_NAME" Language="en_US">
-	  <Text>Celtic Migrations</Text>
+	  <Text>La Tene Culture</Text>
 	</Replace>
 	<Replace Tag="LOC_HSD_VICTORY_CIVILIZATION_GAUL_3_NAME" Language="en_US">
-	  <Text>Painted Warriors</Text>
+	  <Text>Torc and Carnyx</Text>
 	</Replace>
 	
 	<!-- GEORGIA -->
@@ -728,7 +803,7 @@
 	
 	<!-- GREECE -->
 	<Replace Tag="LOC_HSD_VICTORY_CIVILIZATION_GREECE_1_NAME" Language="en_US">
-	  <Text>The Classical Age</Text>
+	  <Text>Age of Pericles</Text>
 	</Replace>
 	<Replace Tag="LOC_HSD_VICTORY_CIVILIZATION_GREECE_2_NAME" Language="en_US">
 	  <Text>Cradle of the West</Text>
@@ -970,7 +1045,7 @@
 	
 	<!-- PORTUGAL -->
 	<Replace Tag="LOC_HSD_VICTORY_CIVILIZATION_PORTUGAL_1_NAME" Language="en_US">
-		<Text>First Empire</Text>
+		<Text>Casa Da India</Text>
 	</Replace>
 	<Replace Tag="LOC_HSD_VICTORY_CIVILIZATION_PORTUGAL_2_NAME" Language="en_US">
 		<Text>Age of Discovery</Text>
@@ -1028,10 +1103,21 @@
 	  <Text>Reconquista</Text>
 	</Replace>
 	<Replace Tag="LOC_HSD_VICTORY_CIVILIZATION_SPAIN_2_NAME" Language="en_US">
-	  <Text>Age of Discovery</Text>
+	  <Text>Treaty of Tordesillas</Text>
 	</Replace>
 	<Replace Tag="LOC_HSD_VICTORY_CIVILIZATION_SPAIN_3_NAME" Language="en_US">
 	  <Text>Missionary Zeal</Text>
+	</Replace>
+	
+	<!-- SWEDEN -->
+	<Replace Tag="LOC_HSD_VICTORY_CIVILIZATION_SWEDEN_1_NAME" Language="en_US">
+	  <Text>Vasa Dynasty</Text>
+	</Replace>
+	<Replace Tag="LOC_HSD_VICTORY_CIVILIZATION_SWEDEN_2_NAME" Language="en_US">
+	  <Text>Swedish Empire</Text>
+	</Replace>
+	<Replace Tag="LOC_HSD_VICTORY_CIVILIZATION_SWEDEN_3_NAME" Language="en_US">
+	  <Text>Nordic Model</Text>
 	</Replace>
 
 	<!-- SUMERIA -->
@@ -1043,6 +1129,17 @@
 	</Replace>
 	<Replace Tag="LOC_HSD_VICTORY_CIVILIZATION_SUMERIA_3_NAME" Language="en_US">
 	  <Text>Epic of Gilgamesh</Text>
+	</Replace>
+
+	<!-- VIETNAM -->
+	<Replace Tag="LOC_HSD_VICTORY_CIVILIZATION_VIETNAM_1_NAME" Language="en_US">
+	  <Text>Vietnamese Resistance</Text>
+	</Replace>
+	<Replace Tag="LOC_HSD_VICTORY_CIVILIZATION_VIETNAM_2_NAME" Language="en_US">
+	  <Text>Ly Dynasty</Text>
+	</Replace>
+	<Replace Tag="LOC_HSD_VICTORY_CIVILIZATION_VIETNAM_3_NAME" Language="en_US">
+	  <Text>Nguyen Dynasty</Text>
 	</Replace>
 	
 	<!-- ZULU -->

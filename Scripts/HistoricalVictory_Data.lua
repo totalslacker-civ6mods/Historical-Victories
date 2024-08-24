@@ -1116,7 +1116,7 @@ HSD_victoryConditionsConfig = {
 			era = nil,
             objectives = {
                 {type = "CONTROL_ALL_ADJACENT_RIVER_TO_CAPITAL"},
-                {type = "FIRST_NUM_ACTIVE_ALLIANCES", count = 5},
+                {type = "ALLIANCE_COUNT", count = 5},
                 {type = "MAXIMUM_ALLIANCE_LEVEL_COUNT", count = 1},
             },
             score = 1
@@ -1402,7 +1402,7 @@ HSD_victoryConditionsConfig = {
 			year = nil,
 			era = nil,
             objectives = {
-                {type = "FIRST_NUM_ACTIVE_ALLIANCES", count = 5},
+                {type = "ALLIANCE_COUNT", count = 5},
                 {type = "SUZERAINTY_COUNT", count = 5},
                 {type = "TERRITORY_CONTROL", territory = "SEA", minimumSize = 6},
             },
@@ -1469,7 +1469,7 @@ HSD_victoryConditionsConfig = {
             objectives = {
                 {type = "IMPROVEMENT_COUNT", id = "IMPROVEMENT_TERRACE_FARM", count = 6},
                 {type = "UNIT_KILL_COUNT", id = "UNIT_INCA_WARAKAQ", count = 10},
-                {type = "GOLD_IN_TREASURY", amount = 3000},
+                {type = "GOLD_COUNT", count = 3000},
             },
             score = 1
         },
@@ -1534,8 +1534,7 @@ HSD_victoryConditionsConfig = {
             era = nil,
             objectives = {
                 {type = "RESOURCE_MONOPOLY", id = "RESOURCE_SPICES", percent = 60},
-                {type = "ISLAND_COUNT", count = 10},
-                {type = "COASTAL_CITY_COUNT", count = 6},
+                {type = "COASTAL_CITY_COUNT", count = 10},
             },
             score = 1
         },
@@ -1805,7 +1804,7 @@ HSD_victoryConditionsConfig = {
             era = nil,
             objectives = {
                 {type = "UNIT_KILL_COUNT", id = "UNIT_MAORI_TOA", count = 20},
-                {type = "IMPROVEMENT_COUNT", id = "IMPROVEMENT_PA", count = 10},
+                {type = "IMPROVEMENT_COUNT", id = "IMPROVEMENT_MAORI_PA", count = 10},
                 {type = "BUILDING_COUNT", id = "BUILDING_MARAE", count = 5},
             },
             score = 1
@@ -1828,9 +1827,9 @@ HSD_victoryConditionsConfig = {
             year = nil,
             era = nil,
             objectives = {
-                {type = "MOST_WATER_PLOTS_CONTROL"},
                 {type = "TERRITORY_CONTROL", territory = "SEA", minimumSize = 6},
                 {type = "MOMENT_COUNT", id = "MOMENT_FIND_NEW_CONTINENT_FIRST_IN_WORLD", count = 1},
+                {type = "FIRST_HISTORICAL_MOMENT", id = "MOMENT_WORLD_CIRCUMNAVIGATED_FIRST_IN_WORLD"},
             },
             score = 1
         },

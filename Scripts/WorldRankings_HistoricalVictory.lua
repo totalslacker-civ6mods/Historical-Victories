@@ -38,7 +38,7 @@ local function GetObjectiveDetails(objective)
     local type = objective.type
 
     if type == "2_WONDERS_IN_CITY" then
-        detailsText = Locale.Lookup("LOC_HSD_"..type, objective.firstID, objective.secondID)
+        detailsText = Locale.Lookup("LOC_HSD_"..type, Locale.Lookup(GameInfo.Buildings[objective.firstID].Name), Locale.Lookup(GameInfo.Buildings[objective.secondID].Name))
     elseif type == "ALLIANCE_COUNT" then
         detailsText = Locale.Lookup("LOC_HSD_"..type, objective.count)
 	elseif type == "ALL_CITIES_FOLLOW_SAME_RELIGION" then
