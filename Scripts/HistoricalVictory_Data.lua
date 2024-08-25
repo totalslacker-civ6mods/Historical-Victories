@@ -2004,7 +2004,7 @@ HSD_victoryConditionsConfig = {
             era = nil,
             objectives = {
                 {type = "UNIT_KILL_COUNT", id = "UNIT_MONGOLIAN_KESHIG", count = 50},
-                {type = "BUILDING_COUNT", id = "BUILDING_ORDU", count = 5},
+                {type = "BUILDING_COUNT", id = "BUILDING_ORDU", count = 10},
             },
             score = 1
         },
@@ -2027,9 +2027,8 @@ HSD_victoryConditionsConfig = {
             era = "ERA_RENAISSANCE",
             eraLimit = "END_ERA",
             objectives = {
-                {type = "OCCUPIED_CAPITAL_COUNT", count = 10},
                 {type = "MOMENT_COUNT", id = "MOMENT_UNIT_KILLED_ASSISTED_BY_GENERAL", count = 5},
-                {type = "MOST_CITIES_ON_HOME_CONTINENT"},
+                {type = "TOTAL_LAND_AREA", percent = 17},
             },
             score = 1
         },
