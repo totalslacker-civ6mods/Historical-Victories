@@ -507,8 +507,12 @@
 	<!-- HISTORICAL MOMENT OBJECTIVE TEXT -->
 	<!-- ----------------------------------->
 	
+	<Replace Tag="LOC_HSD_MOMENT_ARTIFACT_EXTRACTED_COUNT" Language="en_US">
+	  <Text>Extract {1_count} artifacts</Text>
+	</Replace>
+	
 	<Replace Tag="LOC_HSD_MOMENT_BARBARIAN_CAMP_DESTROYED_COUNT" Language="en_US">
-	  <Text>Clear {1_count} barbarian camps</Text>
+	  <Text>Clear {1_count} barbarian camps before Renaissance</Text>
 	</Replace>
 	
 	<Replace Tag="LOC_HSD_MOMENT_BUILDING_CONSTRUCTED_GAME_ERA_WONDER_COUNT" Language="en_US">
@@ -571,6 +575,10 @@
 	  <Text>Promote {1_count} master spies</Text>
 	</Replace>
 	
+	<Replace Tag="LOC_HSD_MOMENT_TECH_RESEARCHED_IN_ERA_FIRST_IN_WORLD" Language="en_US">
+	  <Text>Research the first tech of a new era {1_count} times</Text>
+	</Replace>
+	
 	<Replace Tag="LOC_HSD_MOMENT_UNIT_CREATED_FIRST_DOMAIN_AIR_IN_WORLD" Language="en_US">
 	  <Text>First air unit in the world</Text>
 	</Replace>
@@ -580,7 +588,7 @@
 	</Replace>
 	
 	<Replace Tag="LOC_HSD_MOMENT_UNIT_KILLED_ASSISTED_BY_GENERAL_COUNT" Language="en_US">
-	  <Text>Kill {1_count} units near a General</Text>
+	  <Text>Use {1_count} Great Generals in battle</Text>
 	</Replace>
 	
 	<Replace Tag="LOC_HSD_MOMENT_UNIT_KILLED_UNDERDOG_MILITARY_FORMATION_COUNT" Language="en_US">
@@ -799,6 +807,17 @@
 	</Replace>
 	<Replace Tag="LOC_HSD_VICTORY_CIVILIZATION_GERMANY_3_NAME" Language="en_US">
 	  <Text>Mitteleuropa</Text>
+	</Replace>
+	
+	<!-- GRAN COLOMBIA -->
+	<Replace Tag="LOC_HSD_VICTORY_CIVILIZATION_GRAN_COLOMBIA_1_NAME" Language="en_US">
+	  <Text>Libertad Y Union</Text>
+	</Replace>
+	<Replace Tag="LOC_HSD_VICTORY_CIVILIZATION_GRAN_COLOMBIA_2_NAME" Language="en_US">
+	  <Text>Pan Americanism</Text>
+	</Replace>
+	<Replace Tag="LOC_HSD_VICTORY_CIVILIZATION_GRAN_COLOMBIA_3_NAME" Language="en_US">
+	  <Text>Bolivarian Revolution</Text>
 	</Replace>
 	
 	<!-- GREECE -->

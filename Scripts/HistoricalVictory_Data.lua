@@ -103,6 +103,7 @@ HSD_victoryConditionsConfig = {
             id = "DEFENDER_OF_ORTHODOXY",
             index = "2",
             year = 1200,
+            yearLimit = "ON_YEAR",
             era = nil,
             objectives = {
                 {type = "UNIT_KILL_COUNT", id = "UNIT_BYZANTINE_TAGMA", count = 10},
@@ -152,6 +153,7 @@ HSD_victoryConditionsConfig = {
             id = "NILE_DELTA",
 			index = "3",
 			year = -30,
+            yearLimit = "ON_YEAR",
 			era = nil,
             objectives = {
                 {type = "NUM_CITIES_POP_SIZE", cityNum = 3, popNum = 10},
@@ -179,6 +181,7 @@ HSD_victoryConditionsConfig = {
             index = "2",
             year = nil,
             era = "ERA_MEDIEVAL",
+            eraLimit = "END_ERA",
             objectives = {
                 {type = "HIGHEST_CITY_POPULATION"},
                 {type = "GREAT_WORK_COUNT", count = 8},
@@ -205,6 +208,7 @@ HSD_victoryConditionsConfig = {
             index = "1",
             year = nil,
             era = "ERA_RENAISSANCE",
+            eraLimit = "END_ERA",
             objectives = {
                 {type = "ALL_CITIES_FOLLOW_SAME_RELIGION"},
                 {type = "GREAT_WORK_TYPE_COUNT", id = "GREATWORKOBJECT_WRITING", count = 6},
@@ -216,10 +220,12 @@ HSD_victoryConditionsConfig = {
             id = "AGE_OF_PIRACY",
             index = "2",
             year = nil,
-            era = nil,
+            era = "ERA_RENAISSANCE",
+            eraLimit = "END_ERA",
             objectives = {
                 {type = "UNIT_PILLAGE_COUNT", id = "UNIT_ENGLISH_SEADOG", count = 20},
                 {type = "UNIT_KILL_COUNT", id = "UNIT_ENGLISH_SEADOG", count = 10},
+                {type = "MOST_OUTGOING_TRADE_ROUTES"},
             },
             score = 1
         },
@@ -227,10 +233,11 @@ HSD_victoryConditionsConfig = {
             id = "ROYAL_NAVY",
             index = "3",
             year = nil,
-            era = nil,
+            era = "ERA_MODERN",
+            eraLimit = "END_ERA",
             objectives = {
                 {type = "MOST_UNIT_FORMATION_CLASS_TYPE", id = "FORMATION_CLASS_NAVAL"},
-                {type = "MOST_OUTGOING_TRADE_ROUTES"},
+                {type = "MOMENT_COUNT", id = "MOMENT_SHIP_SUNK", count = 30},
                 {type = "TRADING_POST_WITH_ALL_PLAYERS"},
             },
             score = 1
@@ -369,6 +376,7 @@ HSD_victoryConditionsConfig = {
             index = "2",
             year = nil,
             era = "ERA_RENAISSANCE",
+            eraLimit = "END_ERA",
             objectives = {
                 {type = "TRADING_POST_WITH_ALL_PLAYERS_CONTINENT"},
                 {type = "MOST_ACTIVE_TRADE_ROUTES"},
@@ -409,6 +417,7 @@ HSD_victoryConditionsConfig = {
             index = "2",
             year = nil,
             era = "ERA_MEDIEVAL",
+            eraLimit = "END_ERA",
             objectives = {
                 {type = "DISTRICT_COUNT", id = "DISTRICT_CANAL", count = 5},
                 {type = "GOLD_COUNT", count = 3000},
@@ -448,7 +457,7 @@ HSD_victoryConditionsConfig = {
             year = -1050,
 			era = nil,
             objectives = {
-                {type = "CITY_COUNT", count = 4},
+                {type = "CITY_COUNT", count = 6},
                 {type = "UNIT_KILL_COUNT", id = "UNIT_EGYPTIAN_CHARIOT_ARCHER", count = 5},
             },
             score = 1
@@ -536,6 +545,7 @@ HSD_victoryConditionsConfig = {
             index = 3,
             year = nil,
             era = "ERA_RENAISSANCE",
+            eraLimit = "END_ERA",
             objectives = {
                 {type = "HIGHEST_CULTURE"},
                 {type = "BUILDING_COUNT", id = "BUILDING_GRAND_BAZAAR", count = 7},
@@ -630,6 +640,7 @@ HSD_victoryConditionsConfig = {
             index = "1",
             year = nil,
             era = "ERA_MEDIEVAL",
+            eraLimit = "END_ERA",
             objectives = {
                 {type = "HIGHEST_CITY_POPULATION"},
                 {type = "HIGHEST_CULTURE"},
@@ -682,6 +693,7 @@ HSD_victoryConditionsConfig = {
             index = "2",
             year = nil,
             era = "ERA_RENAISSANCE",
+            eraLimit = "END_ERA",
             objectives = {
                 {type = "TERRITORY_CONTROL", territory = "SEA", minimumSize = 8},
                 {type = "FIRST_TECH_RESEARCHED", id = "TECH_CARTOGRAPHY"},
@@ -752,6 +764,7 @@ HSD_victoryConditionsConfig = {
 			index = "1",
             year = nil,
 			era = "ERA_MEDIEVAL",
+            eraLimit = "END_ERA",
             objectives = {
                 {type = "WONDER_BUILT", id = "BUILDING_PETRA"},
                 {type = "MOST_ACTIVE_TRADE_ROUTES"},
@@ -764,6 +777,7 @@ HSD_victoryConditionsConfig = {
 			index = "2",
             year = nil,
             era = "ERA_MEDIEVAL",
+            eraLimit = "END_ERA",
             objectives = {
                 {type = "BUILDING_COUNT", id = "BUILDING_MADRASA", count = 4},
                 {type = "GREAT_PERSON_ERA_COUNT", id = "ERA_MEDIEVAL", count = 4},
@@ -776,6 +790,7 @@ HSD_victoryConditionsConfig = {
 			index = "3",
 			year = nil,
 			era = "ERA_RENAISSANCE",
+            eraLimit = "END_ERA",
             objectives = {
                 {type = "MOST_CITIES_FOLLOWING_RELIGION"},
                 {type = "HIGHEST_FAITH_PER_TURN"},
@@ -832,6 +847,7 @@ HSD_victoryConditionsConfig = {
 			index = "1",
             year = nil,
 			era = "ERA_MEDIEVAL",
+            eraLimit = "END_ERA",
             objectives = {
                 {type = "WONDER_BUILT", id = "BUILDING_HUEY_TEOCALLI"},
                 {type = "HIGHEST_CITY_POPULATION"},
@@ -958,6 +974,7 @@ HSD_victoryConditionsConfig = {
             index = "2",
             year = nil,
             era = "ERA_MEDIEVAL",
+            eraLimit = "END_ERA",
             objectives = {
                 {type = "HIGHEST_FAITH_PER_TURN"},
                 {type = "HIGHEST_CULTURE"},
@@ -996,7 +1013,8 @@ HSD_victoryConditionsConfig = {
             id = "CANADIAN_SHIELD",
             index = "2",
             year = nil,
-            era = nil,
+            era = "ERA_ATOMIC",
+            eraLimit = "END_ERA",
             objectives = {
                 {type = "WONDER_BUILT", id = "BUILDING_BIOSPHERE"},
                 {type = "MOMENT_COUNT", id = "MOMENT_NATIONAL_PARK_CREATED", count = 5},
@@ -1008,7 +1026,8 @@ HSD_victoryConditionsConfig = {
             id = "CANADIAN_DIPLOMACY",
             index = "3",
             year = nil,
-            era = nil,
+            era = "ERA_INFORMATION",
+            eraLimit = "END_ERA",
             objectives = {
                 {type = "MAXIMUM_ALLIANCE_LEVEL_COUNT", count = 4},
                 {type = "MOST_FRIENDS"},
@@ -1064,7 +1083,8 @@ HSD_victoryConditionsConfig = {
             id = "GREAT_PLAINS",
             index = "1",
             year = nil,
-            era = nil,
+            era = "ERA_INDUSTRIAL",
+            eraLimit = "END_ERA",
             objectives = {
                 {type = "UNIT_PROMOTION_LEVEL", id = "UNIT_CREE_OKIHTCITAW", count = 1, level = 8},
                 {type = "IMPROVEMENT_COUNT", id = "IMPROVEMENT_MEKEWAP", count = 10},
@@ -1077,6 +1097,7 @@ HSD_victoryConditionsConfig = {
             index = "2",
             year = nil,
             era = "ERA_INDUSTRIAL",
+            eraLimit = "END_ERA",
             objectives = {
                 {type = "ALLIANCE_COUNT", count = 5},
                 {type = "TRADING_POST_IN_EVERY_CITY"},
@@ -1193,6 +1214,7 @@ HSD_victoryConditionsConfig = {
             index = "2",
             year = nil,
             era = "ERA_MEDIEVAL",
+            eraLimit = "END_ERA",
             objectives = {
                 {type = "HIGHEST_FAITH_PER_TURN"},
                 {type = "CONVERT_ALL_CITIES"},
@@ -1204,7 +1226,8 @@ HSD_victoryConditionsConfig = {
             id = "ETHIOPIAN_HIGHLANDS",
             index = "3",
             year = nil,
-            era = nil,
+            era = "ERA_INDUSTRIAL",
+            eraLimit = "END_ERA",
             objectives = {
                 {type = "UNIT_KILL_COUNT", id = "UNIT_ETHIOPIAN_OROMO_CAVALRY", count = 20},
                 {type = "MOST_HILL_PLOTS"},
@@ -1221,8 +1244,8 @@ HSD_victoryConditionsConfig = {
             year = 1450,
 			era = nil,
             objectives = {
-                {type = "CITY_WITH_IMPROVEMENT_COUNT", id = "IMPROVEMENT_CHATEAU", count = 4},
-                {type = "UNIT_COUNT", id = "UNIT_KNIGHT", count = 5},
+                {type = "CITY_WITH_IMPROVEMENT_COUNT", id = "IMPROVEMENT_CHATEAU", count = 5},
+                {type = "UNIT_COUNT", id = "UNIT_KNIGHT", count = 10},
                 {type = "WONDER_BUILT", id = "BUILDING_MONT_ST_MICHEL"},
             },
             score = 1
@@ -1271,11 +1294,12 @@ HSD_victoryConditionsConfig = {
             id = "LA_TENE_CULTURE",
 			index = "2",
             year = -50,
+            yearLimit = "ON_YEAR",
             era = nil,
             objectives = {
                 {type = "MOMENT_COUNT", id = "MOMENT_CITY_BUILT_NEAR_OTHER_CIV_CITY", count = 5},
                 {type = "MOMENT_COUNT", id = "MOMENT_CITY_BUILT_BECAME_LARGEST_CIV_BY_MARGIN", count = 1},
-                {type = "UNIT_PILLAGE_COUNT", id = "UNIT_GAUL_GAESATAE", count = 10},
+                {type = "TRADING_POST_WITH_ALL_PLAYERS_CONTINENT"},
             },
             score = 1
         },
@@ -1287,7 +1311,7 @@ HSD_victoryConditionsConfig = {
             objectives = {
                 {type = "UNIT_KILL_COUNT", id = "UNIT_GAUL_GAESATAE", count = 20},
                 {type = "UNIT_KILL_ERA_DIFFERENCE", id = "UNIT_GAUL_GAESATAE", count = 2},
-                {type = "TRADING_POST_WITH_ALL_PLAYERS_CONTINENT"},
+                {type = "UNIT_PILLAGE_COUNT", id = "UNIT_GAUL_GAESATAE", count = 10},
             },
             score = 1
         },
@@ -1312,6 +1336,7 @@ HSD_victoryConditionsConfig = {
 			index = "2",
             year = nil,
             era = "ERA_MEDIEVAL",
+            eraLimit = "END_ERA",
             objectives = {
                 {type = "CONVERT_ALL_CITIES"},
                 {type = "HIGHEST_FAITH_PER_TURN"},
@@ -1339,6 +1364,7 @@ HSD_victoryConditionsConfig = {
 			index = "1",
             year = nil,
 			era = "ERA_RENAISSANCE",
+            eraLimit = "END_ERA",
             objectives = {
                 {type = "ALL_CITIES_FOLLOW_SAME_RELIGION"},
 				{type = "OCCUPIED_CAPITAL_COUNT", count = 3},
@@ -1362,6 +1388,7 @@ HSD_victoryConditionsConfig = {
 			index = "3",
 			year = nil,
 			era = "ERA_MODERN",
+            eraLimit = "END_ERA",
             objectives = {
                 {type = "WONDER_BUILT", id = "BUILDING_RUHR_VALLEY"},
                 {type = "HIGHEST_PRODUCTION"},
@@ -1369,6 +1396,47 @@ HSD_victoryConditionsConfig = {
             score = 1
         },
 		-- end of victory conditions
+    },
+
+    CIVILIZATION_GRAN_COLOMBIA = {
+        {
+            id = "LIBERTAD_Y_UNION",
+            index = "1",
+            year = 1822,
+            yearLimit = "ON_YEAR",
+            era = nil,
+            objectives = {
+                {type = "MOMENT_COUNT", id = "MOMENT_CITY_TRANSFERRED_TO_ORIGINAL_OWNER", count = 3},
+                {type = "SUZERAINTY_COUNT", count = 3},
+            },
+            score = 1
+        },
+        {
+            id = "PAN_AMERICANISM",
+            index = "2",
+            year = nil,
+            era = "ERA_MODERN",
+            objectives = {
+                {type = "WONDER_BUILT", id = "BUILDING_PANAMA_CANAL"},
+                {type = "IMPROVEMENT_COUNT", id = "IMPROVEMENT_HACIENDA", count = 30},
+                {type = "CITY_COUNT_FOREIGN_CONTINENT", count = 6},
+            },
+            score = 1
+        },
+        {
+            id = "BOLIVARIAN_REVOLUTION",
+            index = "3",
+            year = nil,
+            era = "ERA_MODERN",
+            eraLimit = "END_ERA",
+            objectives = {
+                {type = "MOST_CITIES_ON_HOME_CONTINENT"},
+                {type = "MOMENT_COUNT", id = "MOMENT_UNIT_KILLED_ASSISTED_BY_GENERAL", count = 5},
+                {type = "UNIT_KILL_COUNT", id = "UNIT_COLOMBIAN_LLANERO", count = 15},
+            },
+            score = 1
+        },
+        -- end of victory conditions
     },
 
     CIVILIZATION_GREECE = {
@@ -1467,7 +1535,7 @@ HSD_victoryConditionsConfig = {
             year = 1572,
             era = nil,
             objectives = {
-                {type = "IMPROVEMENT_COUNT", id = "IMPROVEMENT_TERRACE_FARM", count = 6},
+                {type = "IMPROVEMENT_COUNT", id = "IMPROVEMENT_TERRACE_FARM", count = 12},
                 {type = "UNIT_KILL_COUNT", id = "UNIT_INCA_WARAKAQ", count = 10},
                 {type = "GOLD_COUNT", count = 3000},
             },
@@ -1477,9 +1545,11 @@ HSD_victoryConditionsConfig = {
             id = "ANDEAN_CIVILIZATION",
 			index = "3",
             year = nil,
-            era = nil,
+            era = "ERA_RENAISSANCE",
+            eraLimit = "END_ERA",
             objectives = {
                 {type = "MOST_TERRAIN_CLASS", id = "TERRAIN_CLASS_MOUNTAIN"},
+                {type = "LAND_AREA_HOME_CONTINENT", percent = 25},
             },
             score = 1
         },
@@ -1504,6 +1574,7 @@ HSD_victoryConditionsConfig = {
             index = "2",
             year = nil,
             era = "ERA_MEDIEVAL",
+            eraLimit = "END_ERA",
             objectives = {
                 {type = "CONVERT_MAJORITY_HOME_CONTINENT_RELIGION"},
                 {type = "FIRST_RELIGIOUS_BELIEFS", count = 4},
@@ -1535,6 +1606,7 @@ HSD_victoryConditionsConfig = {
             objectives = {
                 {type = "RESOURCE_MONOPOLY", id = "RESOURCE_SPICES", percent = 60},
                 {type = "COASTAL_CITY_COUNT", count = 10},
+                {type = "IMPROVEMENT_COUNT", id = "IMPROVEMENT_KAMPUNG", count = 20},
             },
             score = 1
         },
@@ -1543,9 +1615,11 @@ HSD_victoryConditionsConfig = {
             index = "2",
             year = nil,
             era = "ERA_MEDIEVAL",
+            eraLimit = "END_ERA",
             objectives = {
-                {type = "MOST_OUTGOING_TRADE_ROUTES"},
+                {type = "MOST_ACTIVE_TRADE_ROUTES"},
                 {type = "HIGHEST_FAITH_PER_TURN"},
+                {type = "TRADING_POST_IN_EVERY_CITY"},
             },
             score = 1
         },
@@ -1555,8 +1629,8 @@ HSD_victoryConditionsConfig = {
             year = nil,
             era = nil,
             objectives = {
-                {type = "UNIT_KILL_COUNT", id = "UNIT_INDONESIAN_JONG", count = 10},
-                {type = "IMPROVEMENT_COUNT", id = "IMPROVEMENT_KAMPUNG", count = 10},
+                {type = "UNIT_KILL_COUNT", id = "UNIT_INDONESIAN_JONG", count = 15},
+                {type = "MOMENT_COUNT", id = "MOMENT_SHIP_SUNK", count = 30},
                 {type = "TERRITORY_CONTROL", territory = "SEA", minimumSize = 8},
             },
             score = 1
@@ -1572,7 +1646,7 @@ HSD_victoryConditionsConfig = {
             era = nil,
             objectives = {
                 {type = "WONDER_BUILT", id = "BUILDING_KOTOKU_IN"},
-                {type = "HIGHEST_CULTURE"},
+                {type = "TERRITORY_CONTROL", territory = "SEA", minimumSize = 6},
                 {type = "FIRST_CITY_SIZE", count = 20},
             },
             score = 1
@@ -1594,10 +1668,11 @@ HSD_victoryConditionsConfig = {
             index = "3",
             year = nil,
             era = "ERA_MODERN",
+            eraLimit = "END_ERA",
             objectives = {
-                {type = "BUILDING_COUNT", id = "BUILDING_ELECTRONICS_FACTORY", count = 3},
+                {type = "BUILDING_COUNT", id = "BUILDING_ELECTRONICS_FACTORY", count = 4},
                 {type = "HIGHEST_TECH_COUNT"},
-                {type = "MOST_UNIT_DOMAIN_TYPE", id = "DOMAIN_SEA"},
+                {type = "MOMENT_COUNT", id = "MOMENT_SHIP_SUNK", count = 20},
             },
             score = 1
         },
@@ -1621,6 +1696,7 @@ HSD_victoryConditionsConfig = {
             index = "2",
             year = nil,
             era = "ERA_MEDIEVAL",
+            eraLimit = "END_ERA",
             objectives = {
                 {type = "BUILDING_COUNT", id = "BUILDING_PRASAT", count = 4},
                 {type = "CONVERT_ALL_CITIES"},
@@ -1632,6 +1708,7 @@ HSD_victoryConditionsConfig = {
             id = "EMPIRE_OF_WATER",
             index = "3",
             year = 1400,
+            yearLimit = "ON_YEAR",
             era = nil,
             objectives = {
                 {type = "DISTRICT_COUNT", id = "DISTRICT_AQUEDUCT", count = 4},
@@ -1649,6 +1726,7 @@ HSD_victoryConditionsConfig = {
             index = "1",
             year = nil,
             era = "ERA_RENAISSANCE",
+            eraLimit = "END_ERA",
             objectives = {
                 {type = "HIGHEST_CITY_POPULATION"},
                 {type = "ALL_CITIES_FOLLOW_SAME_RELIGION"},
@@ -1688,6 +1766,7 @@ HSD_victoryConditionsConfig = {
             id = "HANGUL",
             index = "1",
             year = 1500,
+            yearLimit = "ON_YEAR",
             era = nil,
             objectives = {
                 {type = "FIRST_TECH_RESEARCHED", id = "TECH_PRINTING"},
@@ -1700,6 +1779,7 @@ HSD_victoryConditionsConfig = {
             id = "JOSEON_DYNASTY",
             index = "2",
             year = 1800,
+            yearLimit = "ON_YEAR",
             era = nil,
             objectives = {
                 {type = "UNIT_KILL_COUNT", id = "UNIT_KOREAN_HWACHA", count = 20},
@@ -1714,6 +1794,7 @@ HSD_victoryConditionsConfig = {
             era = nil,
             objectives = {
                 {type = "UNIT_PROMOTION_LEVEL", id = "UNIT_ROCK_BAND", count = 1, level = 4},
+                {type = "GREAT_WORK_TYPE_COUNT", id = "GREATWORKOBJECT_MUSIC", count = 5},
             },
             score = 1
         },
@@ -1748,7 +1829,8 @@ HSD_victoryConditionsConfig = {
             id = "HELLENISTIC_ERA",
             index = "3",
             year = nil,
-            era = nil,
+            era = "ERA_CLASSICAL",
+            eraLimit = "END_ERA",
             objectives = {
                 {type = "WONDER_CONTROL_ALL"},
                 {type = "CITY_NAME_COUNT", id = "ALEXANDRIA", count = 10},
@@ -1764,6 +1846,7 @@ HSD_victoryConditionsConfig = {
             index = "1",
             year = nil,
             era = "ERA_MEDIEVAL",
+            eraLimit = "END_ERA",
             objectives = {
                 {type = "GOLD_COUNT", count = 5000},
                 {type = "HIGHEST_FAITH_PER_TURN"},
@@ -1776,6 +1859,7 @@ HSD_victoryConditionsConfig = {
             index = "2",
             year = nil,
             era = "ERA_MEDIEVAL",
+            eraLimit = "END_ERA",
             objectives = {
                 {type = "MOST_OUTGOING_TRADE_ROUTES"},
                 {type = "DISTRICT_COUNT", id = "DISTRICT_SUGUBA", count = 6},
@@ -1901,9 +1985,11 @@ HSD_victoryConditionsConfig = {
             id = "LONG_COUNT_CALENDAR",
 			index = "3",
 			year = 2012,
+            yearLimit = "ON_YEAR",
 			era = nil,
             objectives = {
                 {type = "HIGHEST_TECH_COUNT"},
+                {type = "MOMENT_COUNT", id = "MOMENT_TECH_RESEARCHED_IN_ERA_FIRST_IN_WORLD", count = 1},
             },
             score = 1
         },
@@ -1927,9 +2013,10 @@ HSD_victoryConditionsConfig = {
             index = "2",
             year = nil,
             era = "ERA_RENAISSANCE",
+            eraLimit = "END_ERA",
             objectives = {
                 {type = "MOST_ACTIVE_TRADE_ROUTES"},
-                {type = "ROUTE_COUNT", count = 40},
+                {type = "ROUTE_COUNT", count = 100},
             },
             score = 1
         },
@@ -1938,9 +2025,11 @@ HSD_victoryConditionsConfig = {
             index = "3",
             year = nil,
             era = "ERA_RENAISSANCE",
+            eraLimit = "END_ERA",
             objectives = {
                 {type = "OCCUPIED_CAPITAL_COUNT", count = 10},
-                {type = "GREAT_PERSON_TYPE_COUNT", id = "GREAT_PERSON_CLASS_GENERAL", count = 3},
+                {type = "MOMENT_COUNT", id = "MOMENT_UNIT_KILLED_ASSISTED_BY_GENERAL", count = 5},
+                {type = "MOST_CITIES_ON_HOME_CONTINENT"},
             },
             score = 1
         },
@@ -1993,9 +2082,8 @@ HSD_victoryConditionsConfig = {
             year = nil,
 			era = nil,
             objectives = {
-                {type = "UNIT_PILLAGE_COUNT", id = "UNIT_NORWEGIAN_LONGSHIP", count = 30},
-                {type = "OCCUPIED_CAPITAL_COUNT", count = 3},
-                {type = "MOST_OUTGOING_TRADE_ROUTES"},
+                {type = "UNIT_PILLAGE_COUNT", id = "UNIT_NORWEGIAN_LONGSHIP", count = 50},
+                {type = "OCCUPIED_CAPITAL_COUNT", count = 5},
             },
             score = 1
         },
@@ -2004,9 +2092,11 @@ HSD_victoryConditionsConfig = {
 			index = "2",
             year = nil,
             era = "ERA_MEDIEVAL",
+            eraLimit = "END_ERA",
             objectives = {
                 {type = "NATURAL_WONDER_COUNT", count = 4},
-                {type = "CITY_COUNT_FOREIGN_CONTINENT", count = 3},
+                {type = "CITY_COUNT_FOREIGN_CONTINENT", count = 4},
+                {type = "MOST_OUTGOING_TRADE_ROUTES"},
             },
             score = 1
         },
@@ -2029,6 +2119,7 @@ HSD_victoryConditionsConfig = {
 			index = "1",
             year = nil,
 			era = "ERA_CLASSICAL",
+            eraLimit = "END_ERA",
             objectives = {
                 {type = "HIGHEST_GOLD_PER_TURN"},
                 {type = "GOLD_COUNT", count = 1500},
@@ -2088,11 +2179,11 @@ HSD_victoryConditionsConfig = {
             id = "EMPIRE_OF_WEALTH",
             index = 3,
             year = nil,
-            era = "ERA_RENAISSANCE",
+            era = "ERA_INDUSTRIAL",
+            eraLimit = "END_ERA",
             objectives = {
                 {type = "MOST_ACTIVE_TRADE_ROUTES"},
                 {type = "BUILDING_COUNT", id = "BUILDING_GRAND_BAZAAR", count = 7},
-                {type = "HAPPIEST_POPULATION"},
             },
         },
     },
@@ -2178,6 +2269,7 @@ HSD_victoryConditionsConfig = {
             id = "PIAST_DYNASTY",
             index = "1",
             year = 1368,
+            yearLimit = "ON_YEAR",
             era = nil,
             objectives = {
                 {type = "HIGHEST_FAITH_PER_TURN"},
@@ -2230,6 +2322,7 @@ HSD_victoryConditionsConfig = {
             index = "2",
             year = nil,
             era = "ERA_RENAISSANCE",
+            eraLimit = "END_ERA",
             objectives = {
                 {type = "FIRST_HISTORICAL_MOMENT", id = "MOMENT_WORLD_CIRCUMNAVIGATED_FIRST_IN_WORLD"},
                 {type = "MOST_OUTGOING_TRADE_ROUTES"},
@@ -2241,6 +2334,7 @@ HSD_victoryConditionsConfig = {
             id = "SECOND_EMPIRE",
             index = "3",
             year = 1800,
+            yearLimit = "ON_YEAR",
             era = nil,
             objectives = {
                 {type = "CITY_COUNT_FOREIGN_CONTINENT", count = 10},
@@ -2261,7 +2355,7 @@ HSD_victoryConditionsConfig = {
             objectives = {
                 {type = "WONDER_BUILT", id = "BUILDING_COLOSSEUM"},
                 {type = "DISTRICT_COUNT", id = "DISTRICT_BATH", count = 4},
-                {type = "ROUTE_COUNT", count = 15},
+                {type = "ROUTE_COUNT", count = 30},
             },
             score = 1
         },
@@ -2385,6 +2479,7 @@ HSD_victoryConditionsConfig = {
 			index = "2",
             year = nil,
             era = "ERA_CLASSICAL",
+            eraLimit = "END_ERA",
             objectives = {
                 {type = "IMPROVEMENT_COUNT", id = "IMPROVEMENT_KURGAN", count = 10},
                 {type = "MOST_TERRAIN_TYPE", id = "TERRAIN_PLAINS"},
@@ -2475,6 +2570,7 @@ HSD_victoryConditionsConfig = {
 			index = "3",
             year = nil,
 			era = "ERA_MODERN",
+            eraLimit = "END_ERA",
             objectives = {
                 {type = "MAXIMUM_ALLIANCE_LEVEL_COUNT", count = 3},
                 {type = "HAPPIEST_POPULATION"},
@@ -2515,7 +2611,7 @@ HSD_victoryConditionsConfig = {
 			year = nil,
 			era = "ERA_ANCIENT",
             objectives = {
-                {type = "UNIT_KILL_COUNT", id = "UNIT_SUMERIAN_WAR_CART", count = 5},
+                {type = "UNIT_KILL_COUNT", id = "UNIT_SUMERIAN_WAR_CART", count = 10},
 				{type = "FIRST_GREAT_PERSON_CLASS", id = "GREAT_PERSON_CLASS_WRITER"},
             },
             score = 1
@@ -2541,6 +2637,7 @@ HSD_victoryConditionsConfig = {
 			index = "2",
             year = nil,
 			era = "ERA_MEDIEVAL",
+            eraLimit = "END_ERA",
             objectives = {
                 {type = "HIGHEST_CULTURE"},
                 {type = "ALL_CITIES_FOLLOW_SAME_RELIGION"},
