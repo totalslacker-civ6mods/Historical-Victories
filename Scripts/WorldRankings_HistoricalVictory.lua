@@ -264,9 +264,9 @@ local function GetVictoryTimeLimit(victory)
 		detailsText = tostring(year)
 		-- Time condition only checked on year, not before
 		if yearLimit and (yearLimit == "ON_YEAR") then
-			detailsText = "On ".. detailsText
+			detailsText = Locale.Lookup("LOC_HSD_YEAR_LIMIT_ENABLED_TOOLTIP") .. " " .. detailsText
 		else
-			detailsText = "By ".. detailsText
+			detailsText = Locale.Lookup("LOC_HSD_YEAR_LIMIT_DISABLED_TOOLTIP") .. " " .. detailsText
 		end
 	end
 	if era then
@@ -279,7 +279,7 @@ local function GetVictoryTimeLimit(victory)
 		end
 		if eraLimit and (eraLimit == "END_ERA") then
 			-- Time condition only checked during the era countdown
-			detailsText = detailsText.."End of "
+			detailsText = detailsText..Locale.Lookup("LOC_HSD_ERA_LIMIT_TOOLTIP")
 		end
 		detailsText = detailsText .. Locale.Lookup(GameInfo.Eras[era].Name)
 	end
@@ -767,7 +767,7 @@ function GetHistoricDetails(detailsText: string, CivilizationTypeName: string, P
 			if (g_LocalPlayer:GetDiplomacy():HasMet(PlayerID)) or (g_LocalPlayer:GetID() == PlayerID) then
 				-- Display victory status
 				-- detailsText = detailsText .. "[COLOR:ButtonCS]" .. Locale.Lookup("LOC_HSD_VICTORY_" .. playerTypeName .. "_" .. victoryType .. "_NAME" ) .. "[ENDCOLOR] : "
-				detailsText = detailsText .. "[COLOR:ButtonCS]" .. Locale.Lookup("LOC_HSD_VICTORY_" .. playerTypeName .. "_" .. victoryType .. "_NAME" ) .. "[ENDCOLOR] : [COLOR:NeutralCS]" .. GetVictoryTimeLimit(victories) .."[ENDCOLOR]"
+				detailsText = detailsText .. "[COLOR:ButtonCS]" .. Locale.Lookup("LOC_HSD_VICTORY_" .. playerTypeName .. "_" .. victoryType .. "_NAME" ) .. "[ENDCOLOR] : [COLOR:NeutralCS]" .. Locale.Lookup("LOC_HSD_TIME_CONDITION_TOOLTIP") .. " : " .. GetVictoryTimeLimit(victories) .."[ENDCOLOR]"
 				if not victoryStatus then
 					-- Not yet completed
 					detailsText = detailsText .. "[ICON_Bolt]"
