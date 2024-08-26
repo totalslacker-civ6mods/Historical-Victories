@@ -349,7 +349,7 @@ HSD_victoryConditionsConfig = {
             id = "RICHER_THAN_CRASSUS",
 			index = "3",
 			year = nil,
-			era = nil,
+			era = "ERA_MEDIEVAL",
             objectives = {
                 {type = "GOLD_COUNT", count = 10000},
                 {type = "MOMENT_COUNT", id = "MOMENT_BARBARIAN_CAMP_DESTROYED", count = 10},
