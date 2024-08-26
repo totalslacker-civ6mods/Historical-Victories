@@ -76,7 +76,7 @@
 		<UpdateDatabase id="HISTORICAL_VICTORY_CIVILOPEDIA" criteria="HISTORICAL_VICTORIES_ENABLED">	
 			<Properties><LoadOrder>10</LoadOrder></Properties>
 			<Items>
-				<!-- <File>Text/Civilopedia.sql</File> -->
+				<!-- <File>Data/Civilopedia.sql</File> -->
 			</Items>
 		</UpdateDatabase>
 
@@ -111,7 +111,7 @@
 
 		<!-- TEXT -->
 		<UpdateText id="HISTORICAL_VICTORIES_TEXT" criteria="HISTORICAL_VICTORIES_ENABLED">
-			<!-- <File>Text/CivilopediaText.sql</File> -->
+			<!-- <File>Data/CivilopediaText.sql</File> -->
 		</UpdateText>
 		<UpdateText id="HISTORICAL_VICTORIES_TEXT" criteria="HISTORICAL_VICTORIES_ENABLED">
 			<File>Text/HistoricalVictoryText.xml</File>
@@ -166,6 +166,8 @@
 		<File>Data/EventPopup.xml</File>
 		<File>Data/HistoricalVictory.sql</File>
 		<File>Data/HistoricalVictory_FrontEnd.sql</File>
+		<File>Data/Civilopedia.sql</File>
+		<File>Data/CivilopediaText.sql</File>
 		<File>Config/Config.xml</File>
 		<File>Config/PostConfig.sql</File>
 		<File>Scripts/HistoricalVictory_InGame.xml</File>
@@ -180,7 +182,5 @@
 		<File>Icons/HistoricalVictory_Portrait.dds</File>
 		<File>Text/ConfigText.xml</File>
 		<File>Text/HistoricalVictoryText.xml</File>
-		<File>Text/Civilopedia.sql</File>
-		<File>Text/CivilopediaText.sql</File>
 	</Files>
 </Mod>
