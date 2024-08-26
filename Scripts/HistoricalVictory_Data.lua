@@ -238,7 +238,7 @@ HSD_victoryConditionsConfig = {
             objectives = {
                 {type = "MOST_UNIT_FORMATION_CLASS_TYPE", id = "FORMATION_CLASS_NAVAL"},
                 {type = "MOMENT_COUNT", id = "MOMENT_SHIP_SUNK", count = 30},
-                {type = "TRADING_POST_WITH_ALL_PLAYERS"},
+                {type = "FIRST_HISTORICAL_MOMENT", id = "MOMENT_TRADING_POST_CONSTRUCTED_IN_EVERY_CIV_FIRST_IN_WORLD"},
             },
             score = 1
         },
@@ -495,11 +495,11 @@ HSD_victoryConditionsConfig = {
             id = "HOLY_WAR",
 			index = "2",
             year = nil,
-			era = "ERA_MEDIEVAL",
+			era = nil,
             objectives = {
-                {type = "HOLY_CITY_COUNT", count = 4},
-                {type = "MOMENT_COUNT", id = "MOMENT_CITY_CHANGED_RELIGION_OTHER_HOLY_CITY", count = 3},
-                {type = "FIRST_HISTORICAL_MOMENT", id = "MOMENT_BELIEF_ADDED_MAX_BELIEFS_REACHED"},
+                {type = "HOLY_CITY_COUNT", count = 3},
+                {type = "CONVERT_MAJORITY_HOME_CONTINENT_RELIGION"},
+                {type = "CONVERT_ALL_CITIES"},
             },
             score = 1
         },
@@ -507,7 +507,7 @@ HSD_victoryConditionsConfig = {
             id = "DESERT_EMPIRE",
 			index = "3",
             year = nil,
-			era = nil,
+			era = "ERA_MEDIEVAL",
             objectives = {
                 {type = "WONDER_BUILT", id = "BUILDING_PETRA"},
                 {type = "TERRITORY_CONTROL", territory = "DESERT", minimumSize = 12},
@@ -986,7 +986,7 @@ HSD_victoryConditionsConfig = {
             id = "GREEK_FIRE",
             index = "3",
             year = nil,
-            era = nil,
+            era = "ERA_MEDIEVAL",
             objectives = {
                 {type = "UNIT_KILL_COUNT", id = "UNIT_BYZANTINE_DROMON", count = 20},
                 {type = "COASTAL_CITY_COUNT", count = 10},
@@ -1583,7 +1583,7 @@ HSD_victoryConditionsConfig = {
             score = 1
         },
         {
-            id = "INDIAN_WONDERS",
+            id = "VEDAS",
             index = "3",
             year = nil,
             era = nil,
@@ -1688,6 +1688,7 @@ HSD_victoryConditionsConfig = {
             objectives = {
                 {type = "WONDER_BUILT", id = "BUILDING_ANGKOR_WAT"},
                 {type = "UNIT_KILL_COUNT", id = "UNIT_KHMER_DOMREY", count = 10},
+				{type = "UNIT_PROMOTION_LEVEL", id = "UNIT_KHMER_DOMREY", count = 1, level = 8},
             },
             score = 1
         },
@@ -2431,7 +2432,7 @@ HSD_victoryConditionsConfig = {
             objectives = {
                 {type = "FIRST_CIVIC_RESEARCHED", id = "CIVIC_THE_ENLIGHTENMENT"},
                 {type = "GREAT_PERSON_ERA_COUNT", id = "ERA_INDUSTRIAL", count = 3},
-                {type = "IMPROVEMENT_YIELD_COUNT", id = "IMPROVEMENT_GOLF_COURSE", yield = "YIELD_CULTURE", count = 3},
+                {type = "IMPROVEMENT_YIELD_COUNT", id = "IMPROVEMENT_GOLF_COURSE", yield = "YIELD_CULTURE", count = 4},
             },
             score = 1
         },
@@ -2454,6 +2455,7 @@ HSD_victoryConditionsConfig = {
             objectives = {
                 {type = "ALLIANCE_COUNT", count = 5},
                 {type = "MAXIMUM_ALLIANCE_LEVEL_COUNT", count = 4},
+				{type = "SUZERAINTY_COUNT", count = 5},
             },
             score = 1
         },
@@ -2532,7 +2534,7 @@ HSD_victoryConditionsConfig = {
 			era = nil,
             objectives = {
                 {type = "CONVERT_NUM_CONTINENTS", count = 3},
-                {type = "IMPROVEMENT_COUNT", id = "IMPROVEMENT_MISSION", count = 10},
+                {type = "IMPROVEMENT_COUNT", id = "IMPROVEMENT_MISSION", count = 30},
                 {type = "FIRST_HISTORICAL_MOMENT", id = "MOMENT_FORMATION_ARMADA_FIRST_IN_WORLD"},
             },
             score = 1

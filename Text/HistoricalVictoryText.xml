@@ -72,19 +72,19 @@
       <Text>{1_current}/{2_total}</Text>
     </Replace>
 	<Replace Tag="LOC_HSD_TIME_CONDITION_TOOLTIP" Language="en_US">
-      <Text>Time Condition</Text>
+      <Text>[ICON_TURN]</Text>
     </Replace>
 	<Replace Tag="LOC_HSD_ERA_LIMIT_ENABLED_TOOLTIP" Language="en_US">
-      <Text>Final 10 turns of the</Text>
+      <Text>End of</Text>
     </Replace>
 	<Replace Tag="LOC_HSD_ERA_LIMIT_DISABLED_TOOLTIP" Language="en_US">
-      <Text>Until the end of the</Text>
+      <Text>&lt;=</Text>
     </Replace>
 	<Replace Tag="LOC_HSD_YEAR_LIMIT_ENABLED_TOOLTIP" Language="en_US">
-      <Text>When year &gt;=</Text>
+      <Text>==</Text>
     </Replace>
 	<Replace Tag="LOC_HSD_YEAR_LIMIT_DISABLED_TOOLTIP" Language="en_US">
-      <Text>While year &lt;</Text>
+      <Text>&lt;</Text>
     </Replace>
 	<Replace Tag="LOC_HSD_TIME_CONDITION_DISABLED_TOOLTIP" Language="en_US">
       <Text>None</Text>
@@ -298,7 +298,7 @@
 	</Replace>
 	
 	<Replace Tag="LOC_HSD_GREAT_WORK_TYPE_COUNT" Language="en_US">
-	  <Text>Own {2_count} {1_greatWorkType}</Text>
+	  <Text>Own {2_count} Great Works of {1_greatWorkType}</Text>
 	</Replace>	
 	
 	<Replace Tag="LOC_HSD_HAPPIEST_POPULATION" Language="en_US">
@@ -310,19 +310,19 @@
 	</Replace>
 	
 	<Replace Tag="LOC_HSD_HIGHEST_CULTURE" Language="en_US">
-	  <Text>Most [ICON_CULTURE] per turn</Text>
+	  <Text>Most [ICON_CultureLarge] per turn</Text>
 	</Replace>
 	
 	<Replace Tag="LOC_HSD_HIGHEST_FAITH_PER_TURN" Language="en_US">
-	  <Text>Most [ICON_FAITH] per turn</Text>
+	  <Text>Most [ICON_FaithLarge] per turn</Text>
 	</Replace>
 	
 	<Replace Tag="LOC_HSD_HIGHEST_GOLD_PER_TURN" Language="en_US">
-	  <Text>Most [ICON_GOLD] per turn</Text>
+	  <Text>Most [ICON_GoldLarge] per turn</Text>
 	</Replace>
 	
 	<Replace Tag="LOC_HSD_HIGHEST_PRODUCTION" Language="en_US">
-	  <Text>Most [ICON_PRODUCTION] per turn</Text>
+	  <Text>Most [ICON_ProductionLarge] per turn</Text>
 	</Replace>
 	
 	<Replace Tag="LOC_HSD_HIGHEST_TECH_COUNT" Language="en_US">
@@ -434,7 +434,7 @@
 	</Replace>
 	
 	<Replace Tag="LOC_HSD_RESOURCE_MONOPOLY" Language="en_US">
-	  <Text>Own {2_percent}% of the world's {1_resourceType}</Text>
+	  <Text>Own {2_percent}% of the world's {3_resourceIcon} {1_resourceType}</Text>
 	</Replace>
 	
 	<Replace Tag="LOC_HSD_ROUTE_COUNT" Language="en_US">
@@ -593,7 +593,7 @@
 	  <Text>Promote {1_count} master spies</Text>
 	</Replace>
 	
-	<Replace Tag="LOC_HSD_MOMENT_TECH_RESEARCHED_IN_ERA_FIRST_IN_WORLD" Language="en_US">
+	<Replace Tag="LOC_HSD_MOMENT_TECH_RESEARCHED_IN_ERA_FIRST_IN_WORLD_COUNT" Language="en_US">
 	  <Text>Research the first tech of a new era {1_count} times</Text>
 	</Replace>
 	
@@ -879,7 +879,7 @@
 		<Text>Silk Road Pilgrims</Text>
 	</Replace>
 	<Replace Tag="LOC_HSD_VICTORY_CIVILIZATION_INDIA_3_NAME" Language="en_US">
-		<Text>Indian Wonders</Text>
+		<Text>Vedas</Text>
 	</Replace>
 	
 	<!-- INDONESIA -->
@@ -1337,6 +1337,17 @@
 	</Replace>
 	<Replace Tag="LOC_HSD_VICTORY_LEADER_SULEIMAN_ALT_3_NAME" Language="en_US">
 		<Text>Empire of Wealth</Text>
+	</Replace>
+	
+	<!-- LEADER_T_ROOSEVELT_ROUGHRIDER -->
+	<Replace Tag="LOC_HSD_VICTORY_LEADER_LEADER_T_ROOSEVELT_ROUGHRIDER_1_NAME" Language="en_US">
+		<Text>Manifest Destiny</Text>
+	</Replace>
+	<Replace Tag="LOC_HSD_VICTORY_LEADER_LEADER_T_ROOSEVELT_ROUGHRIDER_2_NAME" Language="en_US">
+		<Text>Americana</Text>
+	</Replace>
+	<Replace Tag="LOC_HSD_VICTORY_LEADER_LEADER_T_ROOSEVELT_ROUGHRIDER_3_NAME" Language="en_US">
+		<Text>Foreign Entanglements</Text>
 	</Replace>
 	
 	<!-- VICTORIA -->

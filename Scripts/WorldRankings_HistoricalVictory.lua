@@ -199,7 +199,7 @@ local function GetObjectiveDetails(objective)
     elseif type == "PROJECT_COUNT" then
         detailsText = Locale.Lookup("LOC_HSD_"..type, Locale.Lookup(GameInfo.Projects[objective.id].Name), objective.count)
     elseif type == "RESOURCE_MONOPOLY" then
-        detailsText = Locale.Lookup("LOC_HSD_"..type, Locale.Lookup(GameInfo.Resources[objective.id].Name), objective.percent)
+        detailsText = Locale.Lookup("LOC_HSD_"..type, Locale.Lookup(GameInfo.Resources[objective.id].Name), objective.percent, "[ICON_"..objective.id.."]")
     elseif type == "ROUTE_COUNT" then
         detailsText = Locale.Lookup("LOC_HSD_"..type, objective.count)
     elseif type == "ROUTE_TYPE_COUNT" then
@@ -250,6 +250,7 @@ end
 
 local function GetVictoryTimeLimit(victory)
 	local detailsText = false
+	local timeConditionText = Locale.Lookup("LOC_HSD_TIME_CONDITION_TOOLTIP")
 	local year = victory.year
 	local yearLimit = victory.yearLimit
 	local era = victory.era
@@ -283,12 +284,12 @@ local function GetVictoryTimeLimit(victory)
 		else
 			detailsText = detailsText .. Locale.Lookup("LOC_HSD_ERA_LIMIT_DISABLED_TOOLTIP")
 		end
-		detailsText = detailsText .. Locale.Lookup(GameInfo.Eras[era].Name)
+		detailsText = detailsText .. " " .. Locale.Lookup(GameInfo.Eras[era].Name)
 	end
 	if not detailsText then
 		detailsText = Locale.Lookup("LOC_HSD_TIME_CONDITION_DISABLED_TOOLTIP")
 	end
-	return detailsText
+	return timeConditionText .. " " .. detailsText
 end
 
 -- ===========================================================================
@@ -730,6 +731,7 @@ function GetHistoricDetails(detailsText: string, CivilizationTypeName: string, P
 	local player = Players[PlayerID]
 	local defaultTypeName = CivilizationTypeName
 	local victoryConditions = Game:GetProperty("HSD_PlayerVictoryConditions") or {}
+	-- local detailsText = detailsText .. "[NEWLINE]"
 	-- local victoriesForPlayer = victoryConditions[PlayerID] or {}
 
 	-- local LeaderTypeName = HSD_victoryConditionsConfig[PlayerConfigurations[PlayerID]:GetLeaderTypeName()]
@@ -768,8 +770,7 @@ function GetHistoricDetails(detailsText: string, CivilizationTypeName: string, P
 			-- if not victoryStatus then victoryStatus = 0 end -- nil check
 			if (g_LocalPlayer:GetDiplomacy():HasMet(PlayerID)) or (g_LocalPlayer:GetID() == PlayerID) then
 				-- Display victory status
-				-- detailsText = detailsText .. "[COLOR:ButtonCS]" .. Locale.Lookup("LOC_HSD_VICTORY_" .. playerTypeName .. "_" .. victoryType .. "_NAME" ) .. "[ENDCOLOR] : "
-				detailsText = detailsText .. "[COLOR:ButtonCS]" .. Locale.Lookup("LOC_HSD_VICTORY_" .. playerTypeName .. "_" .. victoryType .. "_NAME" ) .. "[ENDCOLOR] : [COLOR:NeutralCS]" .. Locale.Lookup("LOC_HSD_TIME_CONDITION_TOOLTIP") .. " : " .. GetVictoryTimeLimit(victories) .."[ENDCOLOR]"
+				detailsText = detailsText .. "[NEWLINE]" .. "[COLOR:ButtonCS]" .. Locale.Lookup("LOC_HSD_VICTORY_" .. playerTypeName .. "_" .. victoryType .. "_NAME" ) .. "[ENDCOLOR] : [COLOR:NeutralCS]" ..  GetVictoryTimeLimit(victories) .."[ENDCOLOR]"
 				if not victoryStatus then
 					-- Not yet completed
 					detailsText = detailsText .. "[ICON_Bolt]"
