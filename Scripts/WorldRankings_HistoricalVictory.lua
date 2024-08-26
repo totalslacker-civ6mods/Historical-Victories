@@ -279,12 +279,14 @@ local function GetVictoryTimeLimit(victory)
 		end
 		if eraLimit and (eraLimit == "END_ERA") then
 			-- Time condition only checked during the era countdown
-			detailsText = detailsText..Locale.Lookup("LOC_HSD_ERA_LIMIT_TOOLTIP")
+			detailsText = detailsText .. Locale.Lookup("LOC_HSD_ERA_LIMIT_ENABLED_TOOLTIP")
+		else
+			detailsText = detailsText .. Locale.Lookup("LOC_HSD_ERA_LIMIT_DISABLED_TOOLTIP")
 		end
 		detailsText = detailsText .. Locale.Lookup(GameInfo.Eras[era].Name)
 	end
 	if not detailsText then
-		detailsText = ""
+		detailsText = Locale.Lookup("LOC_HSD_TIME_CONDITION_DISABLED_TOOLTIP")
 	end
 	return detailsText
 end
