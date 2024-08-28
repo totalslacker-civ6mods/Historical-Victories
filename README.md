@@ -768,7 +768,7 @@
 1. Scottish Enlightenment : None
    - Be the first to research The Enlightenment
    - Recruit 3 Great People from the Industrial Era
-   - Build 4 Golf Course improvements that yield culture
+   - Build a Golf Course that yields 4 culture
 2. Highland Charge : None
    - Kill 10 units with the Scottish Highlander unit
    - Promote 1 Scottish Highlander unit to level 8
@@ -810,7 +810,7 @@
    - Kill 10 units with the Swedish Carolean unit
    - Recruit 1 Great General from the Renaissance Era
 2. Swedish Empire : <= Industrial Era
-   - Build 10 Open-Air Museum improvements that yield culture
+   - Build an Open-Air Museum that yields 10 culture
    - Control a named sea of at least 6 plots
 3. Nordic Model : End of Modern Era
    - Reach maximum alliance level with 3 civilizations
