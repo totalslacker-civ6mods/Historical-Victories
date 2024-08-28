@@ -407,7 +407,7 @@
    - Have a trading post with every player on your continent
 3. Torc and Carnyx : None
    - Kill 20 units with the Gaul Gaesatae unit
-   - Kill 2 units with the Gaul Gaesatae unit that are from a different era
+   - Kill a unit with the Gaul Gaesatae that is 2 eras above
    - Pillage 10 plots with the Gaul Gaesatae unit
 
 ### CIVILIZATION_GEORGIA
@@ -449,11 +449,11 @@
    - Kill 15 units with the Colombian Llanero unit
 
 ### CIVILIZATION_GREECE
-1. Age of Pericles : None
+1. Age of Pericles : <= Classical Era
    - Build the Oracle wonder
    - Build the Colossus wonder
    - Be the first to recruit a Great Admiral
-2. Cradle of the West : None
+2. Cradle of the West : End of Classical Era
    - Activate 4 Great People
    - Have the highest culture
 3. Philhellenes : None
@@ -465,11 +465,11 @@
 1. Magyar Conquest : None
    - Kill 20 units with the Hungary Black Army unit
    - Kill 20 units with the Hungary Huszar unit
-2. Golden Bull : None
+2. Golden Bull : <= Renaissance Era
    - Achieve suzerainty over 3 city-states
    - Own 5 districts adjacent to your capital
    - Create 5 historical moments by levying military
-3. Great Hungarian Plain : None
+3. Great Hungarian Plain : < 1904AD
    - Build the Orszaghaz wonder
    - Own 3 Thermal Bath buildings
    - Form 5 alliances
@@ -477,20 +477,20 @@
 ### CIVILIZATION_INCA
 1. Machu Picchu : None
    - Build the Machu Picchu wonder
-2. Sapa Inca : None
+2. Sapa Inca : < 1572AD
    - Build 12 Terrace Farm improvements
    - Kill 10 units with the Inca Warakaq unit
    - Accumulate 3000 gold
-3. Andean Civilization : None
+3. Andean Civilization : End of Renaissance Era
    - Control the most mountain terrain
    - Control 25% of the land area on your home continent
 
 ### CIVILIZATION_INDIA
-1. Mauryan Empire : None
+1. Mauryan Empire : <= Classical Era
    - Kill 10 units with the Indian Varu unit
    - Build 5 Stepwell improvements
    - Create 1 historical moment by becoming the largest civilization by margin
-2. Silk Road Pilgrims : None
+2. Silk Road Pilgrims : End of Medieval Era
    - Convert the majority of your home continent to your religion
    - Be the first to adopt 4 religious beliefs
    - Own 10 Guru units
@@ -504,7 +504,7 @@
    - Achieve a 60% monopoly on Spices
    - Own 10 coastal cities
    - Build 20 Kampung improvements
-2. Trade Center : None
+2. Trade Center : End of Medieval Era
    - Have the most active trade routes
    - Have the highest faith per turn
    - Have a trading post in every city
@@ -522,7 +522,7 @@
    - Kill 20 units with the Japanese Samurai unit
    - Conquer 5 cities with the Japanese Samurai unit
    - Promote 1 Japanese Samurai unit to level 8
-3. Meiji Restoration : None
+3. Meiji Restoration : End of Modern Era
    - Own 4 Electronics Factory buildings
    - Have the highest number of technologies
    - Sink 20 ships
@@ -532,21 +532,21 @@
    - Build the Angkor Wat wonder
    - Kill 10 units with the Khmer Domrey unit
    - Promote 1 Khmer Domrey unit to level 8
-2. Monastic Education : None
+2. Monastic Education : End of Medieval Era
    - Own 4 Prasat buildings
    - Convert all cities to your religion
    - Have the highest faith per turn
-3. Empire of Water : None
+3. Empire of Water : == 1400AD
    - Own 4 Aqueduct districts
    - Have the happiest population
    - Have the highest city population
 
 ### CIVILIZATION_KONGO
-1. Kongo Kingdom : None
+1. Kongo Kingdom : End of Renaissance Era
    - Have the highest city population
    - Have all cities follow the same religion
    - Own 10 Mbanza districts
-2. Icons of Africa : None
+2. Icons of Africa : < 1800AD
    - Own 5 Relic Great Works
    - Own 5 Artifact Great Works
    - Own 5 Sculpture Great Works
@@ -556,11 +556,11 @@
    - Control all plots of the river adjacent to your capital
 
 ### CIVILIZATION_KOREA
-1. Hangul : None
+1. Hangul : == 1500AD
    - Be the first to research Printing
    - Have the highest number of technologies
    - Have a governor in every city
-2. Joseon Dynasty : None
+2. Joseon Dynasty : == 1800AD
    - Kill 20 units with the Korean Hwacha unit
    - Have the highest culture
 3. K-Pop : None
@@ -568,23 +568,23 @@
    - Own 5 Music Great Works
 
 ### CIVILIZATION_MACEDON
-1. Conquests of Alexander : None
+1. Conquests of Alexander : < 300BC
    - Occupy 3 capital cities
    - Create 1 historical moment by killing units assisted by a general
 2. The Diadochi : None
    - Recruit 5 Great Generals
    - Kill 20 units with the Macedonian Hetairoi unit
    - Promote 1 Macedonian Hypaspist unit to level 8
-3. Hellenistic Era : None
+3. Hellenistic Era : End of Classical Era
    - Control all wonders
    - Own 10 cities named Alexandria
 
 ### CIVILIZATION_MALI
-1. Golden Age of Mali : None
+1. Golden Age of Mali : End of Medieval Era
    - Accumulate 5000 gold
    - Have the highest faith per turn
    - Build the University of Sankore wonder
-2. Trans-Saharan Trade : None
+2. Trans-Saharan Trade : End of Medieval Era
    - Have the most outgoing trade routes
    - Own 6 Suguba districts
 3. Sahel Empire : None
@@ -624,7 +624,7 @@
 2. Star Wars : None
    - Own 6 cities within 6 plots of your capital
    - Kill 20 units with the Mayan Hulche unit
-3. Long Count Calendar : None
+3. Long Count Calendar : == 2012AD
    - Have the highest number of technologies
    - Create 1 historical moment by being the first to research a technology in an era
 
@@ -632,19 +632,19 @@
 1. Mongol Shot : None
    - Kill 50 units with the Mongolian Keshig unit
    - Own 10 Ordu buildings
-2. Silk Road : None
+2. Silk Road : End of Renaissance Era
    - Have the most active trade routes
    - Complete 100 trade routes
-3. Yeke Mongghol Ulus : None
+3. Yeke Mongghol Ulus : End of Renaissance Era
    - Create 5 historical moments by killing units assisted by a general
    - Control 17% of the total land area
 
 ### CIVILIZATION_NETHERLANDS
-1. Dutch Empire : None
+1. Dutch Empire : <= Renaissance Era
    - Own at least 1 city on every continent
    - Own 7 cities on foreign continents
    - Kill 10 units with the De Zeven Provinciën unit
-2. Dutch Golden Age : None
+2. Dutch Golden Age : < 1672AD
    - Build 6 Polder improvements
    - Own 10 Art Great Works
 3. Trade Mastery : None
@@ -656,15 +656,15 @@
 1. Viking Age : None
    - Pillage 50 plots with the Norwegian Longship unit
    - Occupy 5 capital cities
-2. Norse Expeditions : None
+2. Norse Expeditions : End of Medieval Era
    - Discover 4 natural wonders
    - Own 4 cities on foreign continents
    - Have the most outgoing trade routes
-3. Land of the Midnight Sun : None
+3. Land of the Midnight Sun : <= Renaissance Era
    - Control 15 ice plots
 
 ### CIVILIZATION_NUBIA
-1. Kingdom of Gold : None
+1. Kingdom of Gold : End of Classical Era
    - Have the highest gold per turn
    - Accumulate 1500 gold
 2. Bowmen of Ta-Seti : None
@@ -690,11 +690,11 @@
    - Have the most culture
 
 ### CIVILIZATION_PERSIA
-1. The Immortals : None
+1. The Immortals : < 450BC
    - Own 5 Immortal units
    - Kill 10 units with the Immortal unit
    - Occupy 3 capital cities
-2. Achaemenid Architecture : None
+2. Achaemenid Architecture : < 330BC
    - Build the Apadana wonder
    - Build 5 Pairidaeza improvements
 3. King of Kings : None
@@ -726,25 +726,25 @@
    - Send 10 envoys to city-states
 
 ### CIVILIZATION_PORTUGAL
-1. Casa da India : None
+1. Casa da India : < 1580AD
    - Own 5 cities on foreign continents
    - Build the Torre de Belem wonder
    - Build 5 Feitoria improvements
-2. Age of Discovery : None
+2. Age of Discovery : End of Renaissance Era
    - Be the first to circumnavigate the world
    - Have the most outgoing trade routes
    - Kill 10 units with the Portuguese Nau unit
-3. Second Empire : None
+3. Second Empire : == 1800AD
    - Own 10 cities on foreign continents
    - Have all cities follow the same religion
    - Create 1 historical moment by constructing a trading post in every civilization first
 
 ### CIVILIZATION_ROME
-1. Pax Romana : None
+1. Pax Romana : < 200AD
    - Build the Colosseum wonder
    - Own 4 Bath districts
    - Own 30 route plots
-2. Imperium Romanum : None
+2. Imperium Romanum : < 450AD
    - Control 20% of the land area on your home continent
    - Own 5 cities on foreign continents
 3. Mare Nostrum : None
@@ -759,7 +759,7 @@
    - Control 15% of the total land area
    - Kill 20 units with the Russian Cossack unit
    - Be the first to complete the Earth Satellite project
-3. Iron Curtain : None
+3. Iron Curtain : <= Atomic Era
    - Be the first to adopt Communism
    - Own 10 Factory buildings
    - Own 10 nuclear weapons
@@ -778,11 +778,11 @@
    - Achieve suzerainty over 5 city-states
 
 ### CIVILIZATION_SCYTHIA
-1. Parthian Shot : None
+1. Parthian Shot : <= Classical Era
    - Kill 10 units with the Scythian Horse Archer unit
    - Pillage 10 plots with the Scythian Horse Archer unit
    - Own 20 Light Cavalry units
-2. Steppe Nomads : None
+2. Steppe Nomads : End of Classical Era
    - Build 10 Kurgan improvements
    - Control the most plains terrain
 3. Horse Masters : None
@@ -795,7 +795,7 @@
    - Kill 20 units with the Spanish Conquistador unit
    - Conquer 5 cities with the Spanish Conquistador unit
    - Launch 5 Inquisitions
-2. Treaty of Tordesillas : None
+2. Treaty of Tordesillas : < 1650AD
    - Build the Casa de Contratacion wonder
    - Own 10 cities on foreign continents
    - Discover 5 natural wonders
@@ -805,14 +805,14 @@
    - Be the first to form an Armada
 
 ### CIVILIZATION_SWEDEN
-1. Vasa Dynasty : None
+1. Vasa Dynasty : <= Renaissance Era
    - Own 10 Great Works
    - Kill 10 units with the Swedish Carolean unit
    - Recruit 1 Great General from the Renaissance Era
-2. Swedish Empire : None
+2. Swedish Empire : <= Industrial Era
    - Build 10 Open-Air Museum improvements that yield culture
    - Control a named sea of at least 6 plots
-3. Nordic Model : None
+3. Nordic Model : End of Modern Era
    - Reach maximum alliance level with 3 civilizations
    - Have the happiest population
    - Recruit 1 Great Scientist from the Modern Era
@@ -822,10 +822,10 @@
    - Be the first to construct a Library
    - Be the first to research Early Empire
    - Be the first to declare war
-2. Sumerian Renaissance : None
+2. Sumerian Renaissance : <= Ancient Era
    - Build the Etemenanki wonder
    - Build 3 Ziggurat improvements
-3. Epic of Gilgamesh : None
+3. Epic of Gilgamesh : <= Ancient Era
    - Kill 10 units with the Sumerian War Cart unit
    - Be the first to recruit a Great Writer
 
@@ -834,18 +834,18 @@
    - Kill 20 units with the Vietnamese Voi Chien unit
    - Create 1 historical moment by killing units with an underdog military formation
    - Create 1 historical moment by killing units with underdog promotions
-2. Ly Dynasty : None
+2. Ly Dynasty : End of Medieval Era
    - Have the highest culture
    - Have all cities follow the same religion
    - Own 6 Thanh districts
-3. Nguyen Dynasty : None
+3. Nguyen Dynasty : <= Industrial Era
    - Control all plots of the river adjacent to your capital
    - Control 4 sea plots
    - Control 4 mountain plots
 
 ### CIVILIZATION_ZULU
 1. Isandlwana : None
-   - Kill 2 units with the Zulu Impi unit that are from a different era
+   - Kill a unit with the Zulu Impi that is 2 eras above
 2. Cattle Wealth : None
    - Achieve a 60% monopoly on Cattle
 3. Zulu Wars : None
