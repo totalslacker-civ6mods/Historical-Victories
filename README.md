@@ -273,10 +273,10 @@
 1. Land of Two Rivers : None
    - Control all plots of the river adjacent to your capital
    - Build the Hanging Gardens wonder
-2. Walls of Babylon : None
+2. Walls of Babylon : End of Classical Era
    - Build a Castle in your capital
    - Kill 10 units with the Babylonian Sabum Kibittum unit
-3. Center of the World : None
+3. Center of the World : End of Classical Era
    - Have the highest city population
    - Have the highest culture
    - Be the first to research Astronomy
@@ -297,11 +297,11 @@
 ### CIVILIZATION_BYZANTIUM
 1. Holy Wisdom : None
    - Build the Hagia Sophia wonder
-2. Religious Icons : None
+2. Religious Icons : End of Medieval Era
    - Have the highest faith per turn
    - Have the highest culture
    - Convert all cities to your religion
-3. Greek Fire : None
+3. Greek Fire : <= Medieval Era
    - Kill 20 units with the Byzantine Dromon unit
    - Own 10 coastal cities
    - Control a named sea of at least 6 plots
@@ -310,11 +310,11 @@
 1. Winter Sports : None
    - Build 10 Ski Resort improvements
    - Build 10 Ice Hockey Rink improvements
-2. Canadian Shield : None
+2. Canadian Shield : End of Atomic Era
    - Build the Biosphere wonder
    - Create 5 National Parks
    - Control the most arctic terrain
-3. Canadian Diplomacy : None
+3. Canadian Diplomacy : End of Information Era
    - Reach maximum alliance level with 4 civilizations
    - Have the most friends
    - Create 1 historical moment by winning an emergency as a member
@@ -334,11 +334,11 @@
    - Have the highest tourism
 
 ### CIVILIZATION_CREE
-1. Great Plains : None
+1. Great Plains : End of Industrial Era
    - Promote 1 Okihtcitaw unit to level 8
    - Build 10 Mekewap improvements
    - Control the most plains terrain
-2. Iron Confederacy : None
+2. Iron Confederacy : End of Industrial Era
    - Form 5 alliances
    - Have a trading post in every city
    - Have a trading post with every player on your continent
@@ -353,7 +353,7 @@
    - Control all plots of the river adjacent to your capital
    - Form 5 alliances
    - Reach maximum alliance level with 1 civilization
-3. Breadbasket of the Ancient World : None
+3. Breadbasket of the Ancient World : == 30BC
    - Have the most active trade routes
    - Have the highest city population
 
@@ -375,33 +375,33 @@
 1. Kingdom of Aksum : None
    - Own 10 Artifact Great Works
    - Be the first to adopt 4 religious beliefs
-2. Solomonic Dynasty : None
+2. Solomonic Dynasty : End of Medieval Era
    - Have the highest faith per turn
    - Convert all cities to your religion
    - Build 5 Rock-Hewn Church improvements
-3. Ethiopian Highlands : None
+3. Ethiopian Highlands : End of Industrial Era
    - Kill 20 units with the Ethiopian Oromo Cavalry unit
    - Control the most hill plots
 
 ### CIVILIZATION_FRANCE
-1. Age of Chivalry : None
+1. Age of Chivalry : < 1450AD
    - Own 5 cities with a Chateau improvement
    - Own 10 Knight units
    - Build the Mont St. Michel wonder
-2. Napoleonic Wars : None
+2. Napoleonic Wars : < 1815AD
    - Conquer 10 cities with the French Garde Imperiale unit
    - Recruit 1 Great General from the Industrial Era
    - Be the first to research Nationalism
-3. Belle Epoque : None
+3. Belle Epoque : == 1900AD
    - Build the Eiffel Tower wonder
    - Have the highest culture
 
 ### CIVILIZATION_GAUL
-1. Druidic Lore : None
+1. Druidic Lore : < 250BC
    - Own 1 Oracle building
    - Own 1 Stonehenge building
    - Control 10 forest plots
-2. La Tene Culture : None
+2. La Tene Culture : == 50BC
    - Create 5 historical moments by building cities near other civilizations
    - Create 1 historical moment by becoming the largest civilization by margin
    - Have a trading post with every player on your continent
@@ -415,35 +415,35 @@
    - Reach maximum alliance level with 3 civilizations
    - Achieve suzerainty over 4 city-states
    - Enter 3 Golden Ages
-2. Defender of the Faith : None
+2. Defender of the Faith : End of Medieval Era
    - Convert all cities to your religion
    - Have the highest faith per turn
    - Kill 10 units with the Georgian Khevsureti unit
-3. Caucasian Iberia : None
+3. Caucasian Iberia : <= Medieval Era
    - Control 4 mountain plots
    - Build a Tsikhe in your capital
 
 ### CIVILIZATION_GERMANY
-1. Holy Roman Empire : None
+1. Holy Roman Empire : End of Renaissance Era
    - Have all cities follow the same religion
    - Occupy 3 capital cities
 2. Hanseatic League : None
    - Own 5 Hansa districts
    - Activate 4 Great People
    - Promote 2 Naval Raider units to level 8
-3. Mitteleuropa : None
+3. Mitteleuropa : End of Modern Era
    - Build the Ruhr Valley wonder
    - Have the highest production
 
 ### CIVILIZATION_GRAN_COLOMBIA
-1. Libertad y Union : None
+1. Libertad y Union : == 1822AD
    - Create 3 historical moments by transferring cities to their original owners
    - Achieve suzerainty over 3 city-states
-2. Pan Americanism : None
+2. Pan Americanism : <= Modern Era
    - Build the Panama Canal wonder
    - Build 30 Hacienda improvements
    - Own 6 cities on foreign continents
-3. Bolivarian Revolution : None
+3. Bolivarian Revolution : End of Modern Era
    - Own the most cities on your home continent
    - Create 5 historical moments by killing units assisted by a general
    - Kill 15 units with the Colombian Llanero unit
