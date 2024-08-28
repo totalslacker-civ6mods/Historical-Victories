@@ -163,7 +163,7 @@
 
 ### LEADER_T_ROOSEVELT_ROUGHRIDER
 1. Manifest Destiny : < 1900AD
-   - Discover 4 natural wonders
+   - Control 4 natural wonders
    - Kill 10 units with the American Rough Rider unit
    - Control 40% of the land area on your home continent
 2. Americana : None
@@ -219,7 +219,7 @@
 
 ### CIVILIZATION_AMERICA
 1. Manifest Destiny : < 1900AD
-   - Discover 4 natural wonders
+   - Control 4 natural wonders
    - Create 4 National Parks
    - Control 40% of the land area on your home continent
 2. Americana : None
@@ -249,7 +249,7 @@
 1. Red Continent : <= Modern Era
    - Build 10 Outback Station improvements
    - Control a named desert of at least 10 plots
-   - Discover 2 natural wonders
+   - Control 2 natural wonders
 2. ANZAC : None
    - Promote 2 Digger units to level 8
    - Reach maximum alliance level with 3 civilizations
@@ -599,7 +599,7 @@
 2. Mana : None
    - Control 5 volcano plots
    - Control 10 reef plots
-   - Discover 1 natural wonder
+   - Control 1 natural wonder
 3. Ocean Navigators : None
    - Control a named sea of at least 6 plots
    - Create 1 historical moment by finding a new continent first
@@ -616,7 +616,7 @@
 3. Patagonia : None
    - Control a named mountain range of at least 6 plots
    - Control a named desert of at least 6 plots
-   - Discover 1 natural wonder
+   - Control 1 natural wonder
 
 ### CIVILIZATION_MAYA
 1. Chichen Itza : None
@@ -657,7 +657,7 @@
    - Pillage 50 plots with the Norwegian Longship unit
    - Occupy 5 capital cities
 2. Norse Expeditions : End of Medieval Era
-   - Discover 4 natural wonders
+   - Control 4 natural wonders
    - Own 4 cities on foreign continents
    - Have the most outgoing trade routes
 3. Land of the Midnight Sun : <= Renaissance Era
@@ -798,7 +798,7 @@
 2. Treaty of Tordesillas : < 1650AD
    - Build the Casa de Contratacion wonder
    - Own 10 cities on foreign continents
-   - Discover 5 natural wonders
+   - Control 5 natural wonders
 3. Missionary Zeal : None
    - Convert 3 continents to your religion
    - Build 30 Mission improvements
