@@ -420,7 +420,7 @@
    - Have the highest faith per turn
    - Kill 10 units with the Georgian Khevsureti unit
 3. Caucasian Iberia : <= Medieval Era
-   - Control 4 mountain plots
+   - Control a named mountain range of at least 4 plots
    - Build a Tsikhe in your capital
 
 ### CIVILIZATION_GERMANY
