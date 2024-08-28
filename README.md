@@ -608,7 +608,7 @@
 ### CIVILIZATION_MAPUCHE
 1. People of the Wood : None
    - Build 10 Chemamull improvements
-   - Build 6 Chemamull improvements that yield culture
+   - Build a Chemamull that yields 6 culture
 2. Malon Raiders : None
    - Kill 20 units with the Mapuche Malon Raider unit
    - Pillage 20 plots with the Mapuche Malon Raider unit
